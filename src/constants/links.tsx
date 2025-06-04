@@ -1,4 +1,4 @@
-export const links = [
+export const navbarLinks = [
   {
     id: 1,
     title: "Inicio",
