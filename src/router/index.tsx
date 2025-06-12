@@ -21,8 +21,8 @@ import {
   DashboardOrderPage,
 } from '../pages/dashboard';
 
-import { ClientLayout } from '../layouts/ClientLayout';
-import { DashboardLayout } from '../layouts/DashboardLayout';
+import { ClientLayout } from "../layouts/ClientLayout";
+import { DashboardLayout } from "../layouts/DashboardLayout";
 
 export const router = createBrowserRouter([
   {
