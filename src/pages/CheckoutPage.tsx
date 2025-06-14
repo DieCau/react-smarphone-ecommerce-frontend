@@ -7,6 +7,7 @@ import { Loader } from '../components/shared/Loader';
 import { useEffect } from 'react';
 import { supabase } from '../supabase/client';
 
+// CheckPage 
 export const CheckoutPage = () => {
 	const totalItems = useCartStore(state => state.totalItemsInCart);
 
@@ -42,6 +43,7 @@ export const CheckoutPage = () => {
 				</Link>
 			</header>
 
+			{/* Section Main  */}
 			<main className='w-full h-full flex relative'>
 				{totalItems === 0 ? (
 					<div
