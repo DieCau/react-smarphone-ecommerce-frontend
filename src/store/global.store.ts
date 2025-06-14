@@ -4,6 +4,7 @@ import { devtools } from 'zustand/middleware';
 
 type SheetContent = 'cart' | 'search' | null;
 
+// Interface
 export interface GlobalState {
 	isSheetOpen: boolean;
 	sheetContent: SheetContent;
