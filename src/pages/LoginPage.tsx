@@ -4,6 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { useLogin, useUser } from '../hooks';
 import { Loader } from '../components/shared/Loader';
 
+// LoginPage
 export const LoginPage = () => {
 	const [email, setEmail] = useState('bdj04113@dcobe.com');
 	const [password, setPassword] = useState('Abc123');
