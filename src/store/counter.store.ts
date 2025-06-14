@@ -3,6 +3,7 @@ import { create } from 'zustand';
 
 import { devtools } from 'zustand/middleware';
 
+// Interface
 export interface CounterState {
 	count: number;
 	increment: () => void;
