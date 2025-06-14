@@ -3,6 +3,7 @@ import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import type { ICartItem } from '../components/shared/CartItem';
 
+// Interface 
 export interface CartState {
 	items: ICartItem[];
 	totalItemsInCart: number;
