@@ -6,6 +6,7 @@ import { formatPrice } from '../helpers';
 import { useEffect } from 'react';
 import { supabase } from '../supabase/client';
 
+// ThankyouPage
 export const ThankyouPage = () => {
   const { id } = useParams<{ id: string }>();
 
