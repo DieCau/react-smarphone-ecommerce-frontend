@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LuLoader2 } from 'react-icons/lu';
+import { LuLoader } from 'react-icons/lu';
 import { Link, Navigate } from 'react-router-dom';
 import { useLogin, useUser } from '../hooks';
 import { Loader } from '../components/shared/Loader';
@@ -33,7 +33,7 @@ export const LoginPage = () => {
 
 			{isPending ? (
 				<div className='w-full h-full flex justify-center mt-20'>
-					<LuLoader2 className='animate-spin' size={60} />
+					<LuLoader className='animate-spin' size={60} />
 				</div>
 			) : (
 				<>

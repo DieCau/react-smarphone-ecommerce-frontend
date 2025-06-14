@@ -1,5 +1,5 @@
-import { FieldErrors, UseFormRegister } from 'react-hook-form';
-import { AddressFormValues } from '../../lib/validators';
+import type { FieldErrors, UseFormRegister } from 'react-hook-form';
+import type { AddressFormValues } from '../../lib/validators';
 
 interface Props {
 	register: UseFormRegister<AddressFormValues>;

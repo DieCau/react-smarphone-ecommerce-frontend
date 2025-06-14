@@ -1,4 +1,4 @@
-import { Color, Product, VariantProduct } from '../interfaces';
+import type { Color, Product, VariantProduct } from '../interfaces';
 
 // Función para formatear el precio a dólares
 export const formatPrice = (price: number) => {
