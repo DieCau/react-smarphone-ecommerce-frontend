@@ -37,7 +37,7 @@ export const AboutPage = () => {
 					<a href='mailto:correo@celularesbaratos.com'>
 						correo@celularesbaratos.com
 					</a>{' '}
-					o llamado al <a href='tel:333333333'>3333333333</a>
+					o llamado al <a href='#'>3815678913</a>
 				</p>
 			</div>
 		</div>
