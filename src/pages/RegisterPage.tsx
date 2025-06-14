@@ -9,6 +9,7 @@ import {
   userRegisterSchema,
 } from '../lib/validators';
 
+// RegisterPage
 export const RegisterPage = () => {
   const {
     register,
