@@ -20,6 +20,7 @@ import {
 import { ClientLayout } from '../layouts/ClientLayout';
 import { DashboardLayout } from '../layouts/DashboardLayout';
 
+// Router 
 export const router = createBrowserRouter([
 	{
 		path: '/',
