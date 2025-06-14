@@ -52,6 +52,7 @@ export const RegisterPage = () => {
         </div>
       ) : (
         <>
+          {/* Form Register */}
           <form
             className="flex flex-col items-center gap-4 w-full mt-10 sm:w-[400px] lg:w-[500px]"
             onSubmit={onRegister}
@@ -100,7 +101,6 @@ export const RegisterPage = () => {
               Registrarme
             </button>
           </form>
-
           <p className="text-sm text-stone-800">
             ¿Ya tienes una cuenta?
             <Link to="/registro" className="underline ml-2">
