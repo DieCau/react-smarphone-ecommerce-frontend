@@ -3,6 +3,7 @@ import { useOrders } from '../hooks';
 import { Loader } from '../components/shared/Loader';
 import { TableOrders } from '../components/orders/TableOrders';
 
+// Component OrdersUserPage 
 export const OrdersUserPage = () => {
 	const { data: orders, isLoading } = useOrders();
 

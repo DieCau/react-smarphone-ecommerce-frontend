@@ -6,6 +6,7 @@ import { formatDateLong, formatPrice } from '../helpers';
 
 const tableHeaders = ['Producto', 'Cantidad', 'Total'];
 
+// OrderUserPage
 export const OrderUserPage = () => {
   const { id } = useParams<{ id: string }>();
 
