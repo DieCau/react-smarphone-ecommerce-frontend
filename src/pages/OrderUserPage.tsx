@@ -35,6 +35,7 @@ export const OrderUserPage = () => {
       </div>
 
       <div className="flex flex-col mt-10 mb-5 gap-10">
+        {/* Tabla de productos */}
         <table className="text-sm w-full caption-bottom overflow-auto">
           <thead>
             <tr>
