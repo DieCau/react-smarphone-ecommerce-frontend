@@ -40,7 +40,8 @@ export const ThankyouPage = () => {
           </p>
         </Link>
       </header>
-
+      
+      {/* Section Main */}
       <main className="container flex-1 flex flex-col items-center gap-10">
         <div className="flex gap-3 items-center">
           <CiCircleCheck size={40} />
