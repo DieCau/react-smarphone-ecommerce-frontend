@@ -7,48 +7,46 @@ import { Loader } from '../components/shared/Loader';
 import { supabase } from '../supabase/client';
 
 export const DashboardLayout = () => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const { isLoading, session } = useUser();
-	const [roleLoading, setRoleLoading] = useState(true);
+  const { isLoading, session } = useUser();
+  const [roleLoading, setRoleLoading] = useState(true);
 
-	useEffect(() => {
-		const checkRole = async () => {
-			setRoleLoading(true);
-			const session = await getSession();
-			if (!session) {
-				navigate('/login');
-			}
+  useEffect(() => {
+    const checkRole = async () => {
+      setRoleLoading(true);
+      const session = await getSession();
+      if (!session) {
+        navigate('/login');
+      }
 
-			const role = await getUserRole(
-				session.session?.user.id as string
-			);
+      const role = await getUserRole(session.session?.user.id as string);
 
-			if (role !== 'admin') {
-				navigate('/', { replace: true });
-			}
+      if (role !== 'admin') {
+        navigate('/', { replace: true });
+      }
 
-			setRoleLoading(false);
-		};
+      setRoleLoading(false);
+    };
 
-		checkRole();
+    checkRole();
 
-		supabase.auth.onAuthStateChange(async (event, session) => {
-			if (event === 'SIGNED_OUT' || !session) {
-				navigate('/login', { replace: true });
-			}
-		});
-	}, [navigate]);
+    supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_OUT' || !session) {
+        navigate('/login', { replace: true });
+      }
+    });
+  }, [navigate]);
 
-	if (isLoading || !session || roleLoading) return <Loader />;
+  if (isLoading || !session || roleLoading) return <Loader />;
 
-	return (
-		<div className='flex bg-gray-100 min-h-screen font-montserrat'>
-			<Sidebar />
+  return (
+    <div className="flex bg-gray-100 min-h-screen font-montserrat">
+      <Sidebar />
 
-			<main className='container m-5 mt-7 flex-1 text-slate-800 ml-[140px] lg:ml-[270px]'>
-				<Outlet />
-			</main>
-		</div>
-	);
+      <main className="container m-5 mt-7 flex-1 text-slate-800 ml-[140px] lg:ml-[270px]">
+        <Outlet />
+      </main>
+    </div>
+  );
 };
