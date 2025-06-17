@@ -8,30 +8,28 @@ import { useGlobalStore } from '../store/global.store';
 import { NavbarMobile } from '../components/shared/NavbarMobile';
 
 export const RootLayout = () => {
-	const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
-	const isSheetOpen = useGlobalStore(state => state.isSheetOpen);
-	const activeNavMobile = useGlobalStore(
-		state => state.activeNavMobile
-	);
+  const isSheetOpen = useGlobalStore((state) => state.isSheetOpen);
+  const activeNavMobile = useGlobalStore((state) => state.activeNavMobile);
 
-	return (
-		<div className='h-screen flex flex-col font-montserrat'>
-			<Navbar />
+  return (
+    <div className="h-screen flex flex-col font-montserrat">
+      <Navbar />
 
-			{pathname === '/' && <Banner />}
+      {pathname === '/' && <Banner />}
 
-			<main className='container my-8 flex-1'>
-				<Outlet />
-			</main>
+      <main className="container my-8 flex-1">
+        <Outlet />
+      </main>
 
-			{pathname === '/' && <Newsletter />}
+      {pathname === '/' && <Newsletter />}
 
-			{isSheetOpen && <Sheet />}
+      {isSheetOpen && <Sheet />}
 
-			{activeNavMobile && <NavbarMobile />}
+      {activeNavMobile && <NavbarMobile />}
 
-			<Footer />
-		</div>
-	);
+      <Footer />
+    </div>
+  );
 };
