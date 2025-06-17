@@ -7,35 +7,34 @@ import { useHomeProducts } from '../hooks';
 
 // HomePage
 export const HomePage = () => {
-	const { recentProducts, popularProducts, isLoading } =
-		useHomeProducts();
+  const { recentProducts, popularProducts, isLoading } = useHomeProducts();
 
-	const preparedRecentProducts = prepareProducts(recentProducts);
-	const preparedPopularProducts = prepareProducts(popularProducts);
+  const preparedRecentProducts = prepareProducts(recentProducts);
+  const preparedPopularProducts = prepareProducts(popularProducts);
 
-	return (
-		<div>
-			<FeatureGrid />
+  return (
+    <div>
+      <FeatureGrid />
 
-			{isLoading ? (
-				<ProductGridSkeleton numberOfProducts={4} />
-			) : (
-				<ProductGrid
-					title='Nuevos Productos'
-					products={preparedRecentProducts}
-				/>
-			)}
+      {isLoading ? (
+        <ProductGridSkeleton numberOfProducts={4} />
+      ) : (
+        <ProductGrid
+          title="Nuevos Productos"
+          products={preparedRecentProducts}
+        />
+      )}
 
-			{isLoading ? (
-				<ProductGridSkeleton numberOfProducts={4} />
-			) : (
-				<ProductGrid
-					title='Productos Destacados'
-					products={preparedPopularProducts}
-				/>
-			)}
+      {isLoading ? (
+        <ProductGridSkeleton numberOfProducts={4} />
+      ) : (
+        <ProductGrid
+          title="Productos Destacados"
+          products={preparedPopularProducts}
+        />
+      )}
 
-			<Brands />
-		</div>
-	);
+      <Brands />
+    </div>
+  );
 };
