@@ -1,29 +1,29 @@
 const brands = [
-	{
-		image: '/img/brands/apple-logo.webp',
-		alt: 'Apple',
-	},
-	{
-		image: '/img/brands/samsung-logo.webp',
-		alt: 'Samsung',
-	},
-	{
-		image: '/img/brands/xiaomi-logo.webp',
-		alt: 'Xiaomi',
-	},
-	{
-		image: '/img/brands/realme-logo.webp',
-		alt: 'Realme',
-	},
-	{
-		image: '/img/brands/huawei-logo.png',
-		alt: 'Huawei',
-	},
+  {
+    image: './img/brands/apple-logo.webp',
+    alt: 'Apple',
+  },
+  {
+    image: './img/brands/samsung-logo.webp',
+    alt: 'Samsung',
+  },
+  {
+    image: '/img/brands/xiaomi-logo.webp',
+    alt: 'Xiaomi',
+  },
+  {
+    image: '/img/brands/realme-logo.webp',
+    alt: 'Realme',
+  },
+  {
+    image: '/img/brands/huawei-logo.png',
+    alt: 'Huawei',
+  },
 
-	{
-		image: '/img/brands/honor-logo.png',
-		alt: 'Honor',
-	},
+  {
+    image: '/img/brands/honor-logo.png',
+    alt: 'Honor',
+  },
 ];
 
 export const Brands = () => {
