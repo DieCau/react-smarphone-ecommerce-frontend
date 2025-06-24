@@ -9,7 +9,7 @@ export const Footer = () => {
         to="/"
         className={`text-2xl font-bold tracking-tighter transition-all text-white flex-1`}
       >
-        Celulares Baratos
+        SmartPhones
       </Link>
 
       <div className="flex flex-col gap-4 flex-1">
@@ -47,7 +47,7 @@ export const Footer = () => {
         <p className="font-semibold uppercase tracking-tighter">Síguenos</p>
 
         <p className="text-xs leading-6">
-          No te pierdas las novedades que CelularesBaratos tiene para ti.
+          No te pierdas las novedades que SmartPhones tiene para ti.
         </p>
 
         <div className="flex">

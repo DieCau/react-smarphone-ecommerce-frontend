@@ -24,7 +24,7 @@ export const LoginPage = () => {
 
 	return (
     <div className="h-full flex flex-col items-center mt-12 gap-5">
-      <h1 className="text-4xl font-bold capitalize">Iniciar sesión</h1>
+      <h1 className="text-4xl font-bold">Iniciar Sesión</h1>
 
       <p className="text-sm font-medium">¡Que bueno tenerte de vuelta!</p>
 
