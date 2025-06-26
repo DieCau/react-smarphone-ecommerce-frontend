@@ -1,3 +1,4 @@
+// This file defines TypeScript interfaces for handling order-related data structures in a client application.
 export interface OrderInput {
   address: {
     addressLine1: string;
