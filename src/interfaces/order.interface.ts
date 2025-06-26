@@ -16,6 +16,7 @@ export interface OrderInput {
   totalAmount: number;
 }
 
+// This interface represents the structure of an order item in the context of a shopping cart or order management system.
 export interface OrderItemSingle {
   created_at: string;
   id: number;
