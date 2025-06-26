@@ -4,6 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 export const useCreateOrder = () => {
+  // This hook is used to create a new order.
+  // It uses the `useMutation` hook from `@tanstack/react-query` to
+  // perform the createOrder action and manage the loading state.
+  // The `useQueryClient` hook is used to access the query client for invalidating
+  // queries after a successful mutation.
+  // The `useNavigate` hook from `react-router-dom` is used to navigate to
+  // the thank you page after the order is created.
   const queryClient = useQueryClient();
   const navigate = useNavigate();
 
