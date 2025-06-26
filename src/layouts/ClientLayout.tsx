@@ -36,6 +36,7 @@ export const ClientLayout = () => {
   };
 
   return (
+    // Layout principal del cliente
     <div className="flex flex-col gap-5">
       {/* Menú */}
       <nav className="flex justify-center gap-10 text-sm font-medium">
