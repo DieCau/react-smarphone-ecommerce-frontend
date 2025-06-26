@@ -23,6 +23,7 @@ export const DashboardLayout = () => {
 
       const role = await getUserRole(session.session?.user.id as string);
 
+      // Ingreso segun el rol
       if (role !== 'admin') {
         navigate('/', { replace: true });
       }
