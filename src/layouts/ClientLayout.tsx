@@ -60,6 +60,7 @@ export const ClientLayout = () => {
           </NavLink>
         )}
 
+        {/* Boton de cerrar sesión */}
         <button className="hover:underline" onClick={handleLogout}>
           Cerrar sesión
         </button>
