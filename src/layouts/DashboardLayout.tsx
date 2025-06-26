@@ -31,6 +31,7 @@ export const DashboardLayout = () => {
       setRoleLoading(false);
     };
 
+    // Checking role 
     checkRole();
 
     supabase.auth.onAuthStateChange(async (event, session) => {
