@@ -7,6 +7,13 @@ import { Loader } from '../components/shared/Loader';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 export const ClientLayout = () => {
+  // Creando sesion
+  // Obteniendo el usuario y su rol
+  // Si el usuario no está autenticado, lo redirigimos a la página de inicio de sesión
+  // Si el usuario es un administrador, mostramos el enlace al dashboard
+  // Si el usuario es un cliente, mostramos el enlace a los pedidos
+  // Si el usuario cierra sesión, lo redirigimos a la página de inicio
+  // Mostramos un loader mientras se cargan los datos del usuario y su rol
   const { session, isLoading: isLoadingSession } = useUser();
   const { data: role, isLoading: isLoadingRole } = useRoleUser(
     session?.user.id as string
