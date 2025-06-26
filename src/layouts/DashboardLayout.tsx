@@ -9,6 +9,7 @@ import { supabase } from '../supabase/client';
 export const DashboardLayout = () => {
   const navigate = useNavigate();
 
+  // Creando sesion
   const { isLoading, session } = useUser();
   const [roleLoading, setRoleLoading] = useState(true);
 
