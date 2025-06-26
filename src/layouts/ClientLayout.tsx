@@ -49,6 +49,7 @@ export const ClientLayout = () => {
           Pedidos
         </NavLink>
 
+         {/* Enlace al dashboard solo visible para administradores  */}
         {role === 'admin' && (
           <NavLink
             to="/dashboard/productos"
