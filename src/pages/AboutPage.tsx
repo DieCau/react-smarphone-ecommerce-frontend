@@ -1,5 +1,10 @@
 export const AboutPage = () => {
   return (
+    // This is the AboutPage component
+    // It displays information about the company
+    // and its mission, vision, and values
+    // It also includes a contact section for inquiries
+    // and a background image to enhance the visual appeal
     <div className="space-y-5">
       <h1 className="text-center text-4xl font-semibold tracking-tight mb-5">
         Nuestra empresa
@@ -13,7 +18,7 @@ export const AboutPage = () => {
 
       <div className="flex flex-col gap-4 tracking-tighter leading-7 text-sm font-medium text-slate-800">
         <p>
-          CelularesBaratos es una tienda en línea que se dedica a la venta de
+          SmartPhones es una tienda en línea que se dedica a la venta de
           celulares, fundada en 2021. Nuestro objetivo es ofrecer a nuestros
           clientes la mejor calidad y precio en celulares. Contamos con un
           equipo de profesionales que se encargan de seleccionar los mejores
@@ -21,20 +26,20 @@ export const AboutPage = () => {
         </p>
 
         <p>
-          En CelularesBaratos podrás encontrar una amplia variedad de celulares
+          En SmartPhones podrás encontrar una amplia variedad de celulares
           de las mejores marcas. Además, contamos con promociones y descuentos
           exclusivos para que puedas comprar tu celular al mejor precio.
         </p>
 
         <h2 className="text-3xl font-semibold tracking-tighh mt-8 mb-4">
-          ¡No esperes más y compra tu celular en CelularesBaratos!
+          ¡No esperes más y compra tu celular en SmartPhones!
         </h2>
 
         <p>
           Para más información, no dudes en ponerte en contacto con nosotros, a
           través de nuestro correo electrónico:
-          <a href="mailto:correo@celularesbaratos.com">
-            correo@celularesbaratos.com
+          <a href="mailto:correo@SmartPhones.com">
+            correo@smartPhones.com
           </a>{' '}
           o llamado al <a href="#">3815678913</a>
         </p>
