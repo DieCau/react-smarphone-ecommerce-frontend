@@ -6,6 +6,11 @@ import { useFilteredProducts } from '../hooks';
 import { Pagination } from '../components/shared/Pagination';
 
 export const CellPhonesPage = () => {
+  // Estados para la paginación y los filtros
+  // Aquí se pueden agregar más filtros si es necesario
+  // Por ejemplo, filtros por precio, características, etc.
+  // Por ahora, solo se implementa el filtro por marcas
+  // y la paginación de productos.  
   const [page, setPage] = useState(1);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
