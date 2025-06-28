@@ -8,6 +8,25 @@ import { supabase } from '../supabase/client';
 
 // ThankyouPage
 export const ThankyouPage = () => {
+  // Obtiene el ID de la orden desde los parámetros de la URL
+  // Utiliza el hook useOrder para obtener los datos de la orden
+  // y el estado de carga y error.
+  // Utiliza el hook useUser para obtener la sesión del usuario y el estado de carga.
+  // Si hay un error al cargar la orden, muestra un mensaje de error.
+  // Si la orden se está cargando o no hay datos, muestra un loader.
+  // Si la sesión del usuario se está cargando, muestra un loader.
+  // Si la orden se carga correctamente, muestra los detalles de la orden
+  // y un mensaje de agradecimiento al usuario.
+  // Además, se asegura de que el usuario esté autenticado y redirige a la
+  // página de login si no lo está.
+  // Finalmente, muestra los detalles del pedido, incluyendo los productos,
+  // el total, la información de contacto, el método de pago y la dirección de envío
+  // y un botón para seguir comprando.
+  // También muestra un mensaje de agradecimiento al usuario por su compra.
+  // El componente utiliza el icono CiCircleCheck para mostrar un check de confirmación.
+  // El componente utiliza el helper formatPrice para formatear los precios de los productos.
+  // El componente utiliza el hook useParams para obtener el ID de la orden desde la URL
+  // y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
   const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, isError } = useOrder(Number(id));
