@@ -7,6 +7,11 @@ import { useHomeProducts } from '../hooks';
 
 // HomePage
 export const HomePage = () => {
+  // Obtiene los productos recientes y populares de la página de inicio
+  // Utiliza el hook useHomeProducts para obtener los productos
+  // y el estado de carga.
+  // Luego, prepara los productos para ser mostrados en la cuadrícula de productos.
+  // Finalmente, renderiza la cuadrícula de productos con los productos recientes 
   const { recentProducts, popularProducts, isLoading } = useHomeProducts();
 
   const preparedRecentProducts = prepareProducts(recentProducts);
