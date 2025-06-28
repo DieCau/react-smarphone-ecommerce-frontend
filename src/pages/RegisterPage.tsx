@@ -11,6 +11,13 @@ import {
 
 // RegisterPage
 export const RegisterPage = () => {
+  // Utiliza el hook useForm de react-hook-form para manejar el formulario de registro
+  // Define los valores por defecto del formulario y el esquema de validación usando zod
+  // Utiliza el hook useRegister para manejar el registro del usuario
+  // Utiliza el hook useUser para obtener la sesión del usuario y el estado de carga
+  // Si el usuario ya está autenticado, redirige a la página principal
+  // Si el usuario no está autenticado, muestra el formulario de registro
+  // y maneja el estado de carga y los errores del formulario
   const {
     register,
     handleSubmit,
