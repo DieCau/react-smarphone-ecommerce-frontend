@@ -24,6 +24,18 @@ interface Acc {
 }
 
 export const CellPhonePage = () => {
+  // Obtenemos el slug del producto desde la URL
+  // y lo usamos para cargar el producto correspondiente
+  // También manejamos el estado del producto, colores, almacenamiento y variante seleccionada
+  // Además, implementamos la funcionalidad de añadir al carrito y comprar ahora
+  // Utilizamos hooks personalizados para manejar el estado del contador y del carrito
+  // Finalmente, mostramos la información del producto, incluyendo imágenes, características, opciones de color y almacenamiento,
+  // y botones para agregar al carrito o comprar ahora
+  // También mostramos un mensaje de error si el producto no se encuentra o si hay un error
+  // en la carga del producto
+  // y un loader mientras se carga la información del producto
+  // y un mensaje de error si el producto no se encuentra o si hay un error
+  // en la carga del producto 
   const { slug } = useParams<{ slug: string }>();
 
   const [currentSlug, setCurrentSlug] = useState(slug);
