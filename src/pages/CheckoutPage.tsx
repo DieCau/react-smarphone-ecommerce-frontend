@@ -9,6 +9,16 @@ import { supabase } from '../supabase/client';
 
 // CheckPage
 export const CheckoutPage = () => {
+  // Obtiene el total de items en el carrito
+  // Utiliza el store de Zustand para acceder al estado del carrito
+  // y obtener el total de items en el carrito.
+  // Si el total es 0, muestra un mensaje indicando que el carrito está vacío.
+  // Si hay items en el carrito, muestra el formulario de checkout y los items del carrito
+  // para que el usuario pueda revisar su compra antes de proceder al pago.
+  // También maneja el estado de carga del usuario y redirige al usuario a la
+  // página de login si no está autenticado.
+  // Además, se asegura de que el usuario esté autenticado y redirige a la
+  // página de login si no lo está.
   const totalItems = useCartStore((state) => state.totalItemsInCart);
 
   const { isLoading } = useUser();
