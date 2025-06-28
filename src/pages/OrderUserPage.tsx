@@ -8,6 +8,10 @@ const tableHeaders = ['Producto', 'Cantidad', 'Total'];
 
 // OrderUserPage
 export const OrderUserPage = () => {
+  // Obtiene el ID del pedido de los parámetros de la URL
+  // Utiliza el hook useParams para obtener el ID del pedido
+  // Luego, utiliza el hook useOrder para obtener los detalles del pedido
+  // y el estado de carga.  
   const { id } = useParams<{ id: string }>();
 
   const { data: order, isLoading } = useOrder(Number(id!));
