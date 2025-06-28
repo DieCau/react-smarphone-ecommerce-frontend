@@ -5,6 +5,15 @@ import { TableOrders } from '../components/orders/TableOrders';
 
 // Component OrdersUserPage
 export const OrdersUserPage = () => {
+  // Custom hook to fetch orders
+  // It returns an object with the data and a loading state
+  // If the data is not yet loaded, it will return an empty array
+  // If the data is loaded, it will return the orders
+  // The hook also handles the loading state
+  // and returns a loading spinner while the data is being fetched
+  // The hook is used to fetch the orders from the server
+  // and display them in a table
+  
   const { data: orders, isLoading } = useOrders();
 
   if (isLoading || !orders) return <Loader />;
