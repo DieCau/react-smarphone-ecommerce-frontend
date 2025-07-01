@@ -7,6 +7,13 @@ import { CartItem } from './CartItem';
 import { useCartStore } from '../../store/cart.store';
 
 export const Cart = () => {
+  // Global store actions
+  // closeSheet is used to close the cart sheet when the user clicks on the close button
+  // or when the cart is empty and the user clicks on "Empezar a comprar"
+  // It is a function that updates the state of the global store to close the cart sheet
+  // It is used to manage the visibility of the cart sheet in the UI
+  // It is called when the user clicks on the close button or when the cart is empty
+  // and the user clicks on "Empezar a comprar"
   const closeSheet = useGlobalStore((state) => state.closeSheet);
 
   const cartItems = useCartStore((state) => state.items);
