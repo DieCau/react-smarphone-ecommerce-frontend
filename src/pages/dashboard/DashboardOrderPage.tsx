@@ -7,6 +7,11 @@ import { formatPrice } from '../../helpers';
 const tableHeaders = ['Producto', 'Cantidad', 'Total'];
 
 export const DashboardOrderPage = () => {
+  // This component displays the details of a specific order in the admin dashboard.
+  // It fetches the order data using the order ID from the URL parameters and displays it
+  // in a table format, including product details, quantities, and total amounts. 
+  // It also provides a back button to navigate to the previous page.
+  
   const navigate = useNavigate();
 
   const { id } = useParams<{ id: string }>();
