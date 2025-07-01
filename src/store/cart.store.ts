@@ -68,6 +68,10 @@ const storeApi: StateCreator<CartState> = (set) => ({
 
   removeItem: (variantId) => {
     set((state) => {
+      // Filtramos los items para eliminar el item con el variantId especificado
+      // y actualizamos el estado del carrito.
+      // Calculamos el nuevo total de items y el nuevo total de la cantidad.
+      // Si el item no existe, no hacemos nada.
       const updatedItems = state.items.filter((i) => i.variantId !== variantId);
 
       const newTotalItems = updatedItems.reduce(
