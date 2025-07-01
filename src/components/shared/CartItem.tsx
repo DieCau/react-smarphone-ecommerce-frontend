@@ -36,6 +36,20 @@ export const CartItem = ({ item }: Props) => {
   };
 
   return (
+    // This component renders a single cart item with its details and actions
+    // It displays the product image, name, price, storage, color, and quantity controls
+    // It also provides a button to remove the item from the cart
+    // The increment and decrement functions are used to update the quantity of the item
+    // The removeItem function is called when the user clicks on the "Eliminar" button
+    // The component is styled using Tailwind CSS classes for layout and appearance
+    // The item prop is an object that contains the details of the cart item
+    // The component is used in the Cart component to display the list of items in the cart
+    // The component is responsive and adjusts its layout based on the available space
+    // The component uses the formatPrice helper function to format the price of the item
+    // The component is reusable and can be used in different parts of the application
+    // The component is typed with TypeScript to ensure type safety and better developer experience
+    // The component is exported as a named export for use in other components
+    // The component is a functional component that receives props and returns JSX
     <li className="flex justify-between items-center gap-5">
       <div className="flex">
         <img
