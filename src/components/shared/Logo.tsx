@@ -5,6 +5,10 @@ interface Props {
 }
 
 export const Logo = ({ isDashboard }: Props) => {
+  // Renderiza el logo de la aplicación
+  // Si isDashboard es true, aplica un efecto de hover para escalar el logo
+  // Utiliza el componente Link de react-router-dom para navegar a la página de inicio
+  // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo  
   return (
     <Link
       to="/"
