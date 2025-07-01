@@ -10,6 +10,14 @@ export interface CounterState {
   decrement: () => void;
 }
 
+// Store API
+// This is the store API that defines the state and actions for the counter.
+// It includes methods to increment and decrement the count.
+// The state includes the current count.
+// The store is created using Zustand with devtools middleware for debugging.
+// The count starts at 1.
+// The increment method increases the count by 1.
+// The decrement method decreases the count by 1, ensuring it does not go below 1
 const storeApi: StateCreator<CounterState> = (set) => ({
   count: 1,
 
