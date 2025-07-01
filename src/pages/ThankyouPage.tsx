@@ -163,6 +163,8 @@ export const ThankyouPage = () => {
           </div>
         </div>
 
+        {/* Botón para seguir comprando */}
+
         <div className="flex flex-col justify-between items-center w-full mb-5 gap-3 sm:flex-row md:w-[600px] md:gap-0">
           <p className="text-sm">
             ¿Necesitas ayuda? Ponte en contacto con nosotros
