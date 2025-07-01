@@ -47,6 +47,38 @@ export const ThankyouPage = () => {
   if (isLoading || !data || isLoadingSession) return <Loader />;
 
   return (
+    // Renderiza la página de agradecimiento con los detalles de la orden
+    // y un mensaje de confirmación.
+    // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
+    // Utiliza el componente Link de react-router-dom para navegar a la página de inicio
+    // y el icono CiCircleCheck de react-icons para mostrar un check de confirmación
+    // Utiliza el helper formatPrice para formatear los precios de los productos.
+    // Utiliza el hook useParams para obtener el ID de la orden desde la URL
+    // y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
+    // Utiliza el hook useEffect para escuchar los cambios en el estado de autenticación
+    // y redirigir al usuario a la página de login si no está autenticado.
+    // Utiliza el hook useOrder para obtener los datos de la orden y el estado de carga y error.
+    // Utiliza el hook useUser para obtener la sesión del usuario
+    // y el estado de carga.
+    // Utiliza el icono CiCircleCheck para mostrar un check de confirmación.
+    // Utiliza el helper formatPrice para formatear los precios de los productos.
+    // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
+    // Utiliza el componente Link de react-router-dom para navegar a la página de inicio.
+    // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
+    // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
+    // Utiliza el componente useNavigate para redirigir al usuario a la página de login
+    // si no está autenticado.
+    // Utiliza el componente useEffect para escuchar los cambios en el estado de autenticación
+    // y redirigir al usuario a la página de login si no está autenticado.
+    // Utiliza el componente useOrder para obtener los datos de la orden y el estado de carga y error.
+    // Utiliza el componente useUser para obtener la sesión del usuario y el estado de carga.
+    // Utiliza el componente formatPrice para formatear los precios de los productos.
+    // Utiliza el componente CiCircleCheck para mostrar un check de confirmación.
+    // Utiliza el componente Link para navegar a la página de inicio.
+    // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
+    // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
+    // Utiliza el componente useNavigate para redirigir al usuario a la página de login
+    // si no está autenticado.  
     <div className="flex flex-col h-screen">
       <header className="text-black flex items-center justify-center flex-col px-10 py-12">
         <Link
@@ -164,7 +196,6 @@ export const ThankyouPage = () => {
         </div>
 
         {/* Botón para seguir comprando */}
-
         <div className="flex flex-col justify-between items-center w-full mb-5 gap-3 sm:flex-row md:w-[600px] md:gap-0">
           <p className="text-sm">
             ¿Necesitas ayuda? Ponte en contacto con nosotros
