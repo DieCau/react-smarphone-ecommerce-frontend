@@ -18,6 +18,10 @@ interface Props {
 }
 
 export const CartItem = ({ item }: Props) => {
+  // Actions from the cart store
+  // removeItem is used to remove an item from the cart
+  // updateQuantity is used to update the quantity of an item in the cart
+  // Both are functions that update the state of the cart store 
   const removeItem = useCartStore((state) => state.removeItem);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
 
