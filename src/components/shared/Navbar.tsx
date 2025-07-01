@@ -13,6 +13,8 @@ import { useCustomer, useUser } from '../../hooks';
 import { LuLoader } from 'react-icons/lu';
 
 export const Navbar = () => {
+  // Navbar component that renders the navigation bar with links, search, user, and cart icons
+  // It uses the Logo component for branding and includes responsive design for mobile view 
   const openSheet = useGlobalStore((state) => state.openSheet);
 
   const totalItemsInCart = useCartStore((state) => state.totalItemsInCart);
