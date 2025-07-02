@@ -4,6 +4,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { navbarLinks } from '../../constants/links';
 
 export const NavbarMobile = () => {
+  // Hook to manage the mobile navigation barstate
+  // It provides a close button, navigation links, and a logo  
+  
   const setActiveNavMobile = useGlobalStore(
     (state) => state.setActiveNavMobile
   );
