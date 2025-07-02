@@ -8,6 +8,10 @@ import type { Product } from '../../interfaces';
 import { useNavigate } from 'react-router-dom';
 
 export const Search = () => {
+  // Search component to handle product search functionality
+  // It allows users to search for products and displays the results
+  // It uses a global store to manage the state of the search sheet
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<Product[]>([]);
 
