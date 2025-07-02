@@ -4,7 +4,11 @@ interface Props {
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
+
 export const Pagination = ({ totalItems, page, setPage }: Props) => {
+  // Pagination component to handle the display of items per page
+  // It provides next and previous buttons, and displays the current range of items shown
+  
   const handleNextPage = () => {
     setPage(page + 1);
   };
