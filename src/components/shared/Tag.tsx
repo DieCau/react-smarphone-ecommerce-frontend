@@ -5,6 +5,9 @@ interface Props {
 }
 
 const getTagColor = (content: TagType) => {
+  // Function to determine the background color of the tag based on its content
+  // It returns a specific color class based on the content of the tag
+  
   const lowerContent = content.toLowerCase();
   if (lowerContent === 'nuevo') return 'bg-blue-500';
   if (lowerContent === 'agotado') return 'bg-black';
