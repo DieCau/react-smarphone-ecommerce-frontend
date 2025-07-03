@@ -1,3 +1,5 @@
+// File: client/src/data/initialData.tsx
+// This file contains initial data for the application, including a list of smartphones with their details  
 export const allCelulares = [
   {
     brand: 'Samsung',
