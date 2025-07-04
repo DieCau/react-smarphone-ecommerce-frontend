@@ -44,6 +44,17 @@ export const FeaturesInput = ({ control, errors }: Props) => {
 	};
 
 	return (
+		// Componente para el input de características del producto
+		// Permite agregar, eliminar y mostrar características del producto
+		// Utiliza useFieldArray de react-hook-form para manejar un array de características
+		// Cada característica se muestra como un elemento de lista con un botón para eliminar
+		// Al agregar una nueva característica, se limpia el input
+		// Si hay errores en el campo de características, se muestra un mensaje de error
+		// El input permite agregar características presionando Enter o haciendo clic en un botón
+		// Las características se muestran con un punto de color y el texto correspondiente
+		// El botón de eliminar característica muestra una "X" y elimina la característica al hacer clic
+		// El input tiene un estilo que cambia si hay errores, mostrando un borde rojo
+		// El input es de tipo texto y permite ingresar características como 256Gb de almacenamiento
 		<div className='flex flex-col gap-2'>
 			<label className='text-xs font-bold tracking-tight capitalize text-slate-900'>
 				Características:
