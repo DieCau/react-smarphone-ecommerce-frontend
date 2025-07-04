@@ -21,6 +21,9 @@ interface Props {
 }
 
 export const FormProduct = ({ titleForm }: Props) => {
+  // This component is used to create or update a product.
+  // It uses react-hook-form for form handling and validation.
+  // It also uses zod for schema validation.
   const {
     register,
     handleSubmit,
