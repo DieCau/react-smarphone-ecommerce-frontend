@@ -19,6 +19,9 @@ const tableHeaders = [
 ];
 
 export const TableProduct = () => {
+	// This component renders a table of products with their details.
+	// It allows users to select variants, delete products, and navigate to edit pages.
+	// It uses custom hooks to fetch products and handle deletion.	
 	const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(
 		null
 	);
