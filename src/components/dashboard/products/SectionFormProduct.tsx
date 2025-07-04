@@ -7,6 +7,11 @@ interface Props {
 }
 
 export const SectionFormProduct = ({
+	// Componente para la sección del formulario del producto
+	// Permite mostrar un título y un contenido dentro de una sección con estilo
+	// Recibe una clase opcional para personalizar el estilo
+	// Recibe un título opcional para mostrar en la sección
+	// Recibe los hijos (children) que se mostrarán dentro de la sección
 	className,
 	titleSection,
 	children,
