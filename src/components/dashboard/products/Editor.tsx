@@ -9,6 +9,16 @@ interface Props {
 	initialContent?: JSONContent;
 }
 
+// Componente para la barra de menú del editor
+// Contiene botones para cambiar el formato del texto (encabezados, negrita,
+// cursiva, tachado)
+// Recibe el editor como prop para poder interactuar con él
+// Si el editor no está disponible, no renderiza nada
+// Los botones cambian de estilo si el formato está activo
+// Cada botón llama a un comando del editor para cambiar el formato del texto
+// El botón de encabezado cambia el nivel del encabezado (H1, H2, H3)
+// Los botones de negrita, cursiva y tachado alternan su estado
+// El estilo de los botones cambia según si el formato está activo o no	
 export const MenuBar = ({
 	editor,
 }: {
