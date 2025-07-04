@@ -13,6 +13,7 @@ interface Props {
 	required?: boolean;
 }
 
+// Componente para un input de formulario
 export const InputForm = ({
 	className,
 	label,
