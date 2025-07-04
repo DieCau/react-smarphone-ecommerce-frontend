@@ -16,6 +16,12 @@ export const SectionFormProduct = ({
 	titleSection,
 	children,
 }: Props) => {
+	// Este componente se utiliza para crear una sección dentro del formulario del producto
+	// Permite mostrar un título y un contenido dentro de una sección con estilo
+	// La clase opcional permite personalizar el estilo de la sección
+	// El título opcional se muestra en la sección si se proporciona
+	// Los hijos (children) se renderizan dentro de la sección, permitiendo incluir cualquier
+	// contenido necesario, como inputs, botones, etc.
 	return (
 		<div
 			className={`bg-white border border-gray-300 shadow-sm rounded-md flex flex-col gap-4 p-7 h-fit ${className}`}
