@@ -44,6 +44,18 @@ export const FormProduct = ({ titleForm }: Props) => {
 
   const navigate = useNavigate();
 
+  // This effect is used to set the form values when the product data is loaded.
+  // It checks if the product exists and if the data is not loading.
+  // If the product exists, it sets the form values using setValue from react-hook-form
+  // It maps the product features and variants to the expected format for the form.
+  // It also sets the initial content for the description editor.
+  // This ensures that the form is pre-populated with the existing product data when editing.
+  // If the product is being created, it will not set any values.
+  // This effect runs whenever the product data changes or when the loading state changes.
+  // It is important to ensure that the form is correctly populated with the product data
+  // when editing an existing product, and that the form is empty when creating a new product
+  // This is done to provide a better user experience and to avoid having to fill in the
+  // form fields manually when editing a product.
   useEffect(() => {
     if (product && !isLoading) {
       setValue('name', product.name);
