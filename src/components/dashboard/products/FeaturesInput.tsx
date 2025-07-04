@@ -84,6 +84,11 @@ export const FeaturesInput = ({ control, errors }: Props) => {
 				))}
 			</ul>
 
+			{/* Input para agregar una nueva característica
+			Permite ingresar una nueva característica y agregarla al array de características
+			Si hay errores en el campo de características, se muestra un mensaje de error
+			El input tiene un placeholder que indica el formato esperado
+			El input tiene un estilo que cambia si hay errores, mostrando un borde rojo */}
 			<input
 				type='text'
 				placeholder='256Gb de almacenamiento'
