@@ -101,6 +101,12 @@ export const VariantsInput = ({ control, errors, register }: Props) => {
     setColorActive((prev) => fields.map((_, index) => prev[index] || false));
   }, [fields]);
 
+  // El componente VariantsInput es un formulario que permite gestionar las variantes de un producto.
+  // Utiliza useFieldArray de react-hook-form para manejar dinámicamente un array de campos
+  // que representan las variantes del producto.
+  // Cada variante tiene campos para stock, precio, capacidad de almacenamiento y color.
+  // El componente también maneja la adición y eliminación de variantes,
+  // así como la activación de un selector de color para cada variante.
   return (
     <div className="flex flex-col gap-3">
       <div className="space-y-4 border-b border-slate-200 pb-6">
