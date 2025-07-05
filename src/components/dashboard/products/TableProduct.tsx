@@ -43,6 +43,16 @@ export const TableProduct = () => {
 		}
 	};
 
+	// This function handles the change of selected variant for a product.
+	// It updates the state with the selected variant index for the given product ID.
+	// It is used to display the correct variant details in the table.
+	// The selected variant index is stored in the `selectedVariants` state object.
+	// The key is the product ID and the value is the index of the selected variant.
+	// This allows the user to switch between different variants of a product.
+	// When the user selects a different variant from the dropdown, this function is called
+	// to update the state accordingly.
+	// The selected variant is then used to display the correct price and stock information
+	// in the table.
 	const handleVariantChange = (
 		productId: string,
 		variantIndex: number
