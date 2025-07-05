@@ -12,6 +12,17 @@ interface Props {
 
 const headersVariants = ['Stock', 'Precio', 'Capacidad', 'Color', ''];
 
+// This component renders a form for managing product variants.
+// It allows users to add, remove, and edit product variants with fields for stock, price, storage, and color.
+// It uses React Hook Form's useFieldArray to manage dynamic fields for variants.
+// The component also handles color selection and displays validation errors for each variant.
+// It is designed to be used within a larger product management form.
+// The component uses TypeScript for type safety and defines the Props interface for its props.
+// It also uses React's useState and useEffect hooks to manage local state and side effects.
+// The useWatch hook from React Hook Form is used to observe changes in the color and colorName
+// fields of each variant, allowing for dynamic updates to the UI based on user input.
+// The component is styled using Tailwind CSS classes for a consistent and responsive design.
+// The component is exported as VariantsInput for use in other parts of the application.
 export const VariantsInput = ({ control, errors, register }: Props) => {
   const { fields, remove, append } = useFieldArray({
     control,
