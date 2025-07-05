@@ -1,6 +1,9 @@
 import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 import type { AddressFormValues } from '../../lib/validators';
 
+// This component is used to render an input field for address details
+// in a checkout form. It utilizes react-hook-form for form state management
+// and validation, allowing users to enter their address information.
 interface Props {
 	register: UseFormRegister<AddressFormValues>;
 	errors: FieldErrors<AddressFormValues>;
