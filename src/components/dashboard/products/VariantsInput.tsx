@@ -180,7 +180,7 @@ export const VariantsInput = ({ control, errors, register }: Props) => {
                   )}
                 </button>
               </div>
-
+            
               <div className="flex justify-end">
                 <button
                   type="button"
