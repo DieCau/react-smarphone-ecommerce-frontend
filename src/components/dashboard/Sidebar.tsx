@@ -5,6 +5,8 @@ import { IoLogOutOutline } from 'react-icons/io5';
 import { signOut } from '../../actions';
 
 export const Sidebar = () => {
+	// This component renders the sidebar for the dashboard.
+	// It includes navigation links and a logout button.
 	const handleLogout = async () => {
 		await signOut();
 	};
