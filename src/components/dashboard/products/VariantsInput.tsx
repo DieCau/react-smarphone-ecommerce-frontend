@@ -31,6 +31,30 @@ export const VariantsInput = ({ control, errors, register }: Props) => {
 
   const [colorActive, setColorActive] = useState<boolean[]>([]);
 
+  // Esta función se encarga de añadir una nueva variante al formulario.
+  // Utiliza el método append de useFieldArray para agregar un nuevo objeto
+  // con los campos predeterminados: stock, price, storage, color y colorName
+  // Los valores predeterminados son: stock = 0, price = 0,
+  // storage = '', color = '', colorName = ''
+  // Esto permite al usuario añadir múltiples variantes de un producto
+  // y gestionar sus propiedades de manera dinámica.
+  // El uso de useFieldArray permite manejar dinámicamente un array de campos
+  // en un formulario, facilitando la adición y eliminación de variantes.
+  // El componente VariantsInput es parte de un formulario más grande
+  // que gestiona los productos y sus variantes, permitiendo al usuario
+  // personalizar las características de cada variante de un producto.
+  // El componente utiliza TypeScript para definir los tipos de los valores del formulario
+  // y asegurar la integridad de los datos introducidos por el usuario.
+  // El componente VariantsInput es parte de un formulario más grande
+  // que gestiona los productos y sus variantes, permitiendo al usuario
+  // personalizar las características de cada variante de un producto.
+  // El componente utiliza TypeScript para definir los tipos de los valores del formulario
+  // y asegurar la integridad de los datos introducidos por el usuario.
+  // El componente VariantsInput es parte de un formulario más grande
+  // que gestiona los productos y sus variantes, permitiendo al usuario
+  // personalizar las características de cada variante de un producto.
+  // El componente utiliza TypeScript para definir los tipos de los valores del formulario
+  // y asegurar la integridad de los datos introducidos por el usuario.
   const addVariant = () => {
     append({
       stock: 0,
