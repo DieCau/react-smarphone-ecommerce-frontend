@@ -35,6 +35,13 @@ export const FormCheckout = () => {
   const totalAmount = useCartStore((state) => state.totalAmount);
 
   const onSubmit = handleSubmit((data) => {
+    // Prepare the order input data by mapping
+    // the cart items to the required format
+    // and including the total amount and address details.
+    // Then call the createOrder mutation with the prepared data.
+    // On success, clean the cart.
+    // If the order creation is pending, show a loading spinner.
+    // The order input includes the address, cart items, and total amount.
     const orderInput = {
       address: data,
       cartItems: cartItems.map((item) => ({
