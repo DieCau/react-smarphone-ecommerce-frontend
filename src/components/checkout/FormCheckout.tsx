@@ -11,6 +11,15 @@ import { useCartStore } from '../../store/cart.store';
 import { ImSpinner2 } from 'react-icons/im';
 
 export const FormCheckout = () => {
+  // Initialize the form with the address schema
+  // and set up the form state management
+  // using react-hook-form and zod for validation.
+  // The form includes fields for address details,
+  // shipping methods, and payment information.
+  // It also handles order creation and cart management
+  // using custom hooks and a global cart store.
+  // If the order creation is pending, it displays a loading spinner.
+  // Once the order is successfully created, it cleans the cart.
   const {
     register,
     formState: { errors },
