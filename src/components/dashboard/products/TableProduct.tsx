@@ -72,6 +72,18 @@ export const TableProduct = () => {
 		return <Loader />;
 
 	return (
+		// This component renders a table of products with their details.
+		// It allows users to select variants, delete products, and navigate to edit pages.
+		// It uses custom hooks to fetch products and handle deletion.
+		// The table displays product images, names, selected variants, prices, stock,
+		// creation dates, and action buttons for editing and deleting products.
+		// The `useProducts` hook fetches the products data and handles pagination.
+		// The `useDeleteProduct` hook handles the deletion of a product when the user
+		// clicks the delete button in the menu.
+		// The `formatPrice` and `formatDate` functions are used to format the
+		// price and date values for better readability.
+		// The `CellTableProduct` component is used to render the content of each cell
+		// in the table, providing a consistent style for product names, prices, and dates	
 		<div className='flex flex-col flex-1 border border-gray-200 rounded-lg p-5 bg-white'>
 			<h1 className='font-bold text-xl'>Productos</h1>
 
