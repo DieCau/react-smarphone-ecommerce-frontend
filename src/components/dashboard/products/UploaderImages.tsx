@@ -60,7 +60,15 @@ export const UploaderImages = ({
 			);
 		}
 	};
-
+	
+	// Función para eliminar una imagen
+	// Actualiza el estado de las imágenes y el valor del formulario
+	// al eliminar la imagen seleccionada por su índice
+	// Utiliza el método filter para crear un nuevo array sin la imagen eliminada
+	// Actualiza el valor del formulario con las imágenes restantes
+	// Mapea las imágenes restantes para obtener sus URLs o archivos
+	// Utiliza el índice de la imagen para identificar cuál eliminar
+	// Elimina la imagen del estado y del formulario
 	const handleRemoveImage = (index: number) => {
 		const updatedImages = images.filter((_, i) => i !== index);
 		setImages(updatedImages);
