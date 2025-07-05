@@ -17,6 +17,15 @@ export const InputAddress = ({
 	className,
 	placeholder,
 }: Props) => {
+	// This component renders an input field for address details
+	// using react-hook-form for form state management and validation.	
+	// It takes in the register function from react-hook-form, the errors object, 
+	// the name of the field, and an optional className for styling.
+	// The component renders an input field with the specified name, 
+	// and the errors object is used to display any validation errors.
+	// The placeholder is used to provide a hint to the user about what to enter.
+	// The component also applies conditional styling based on the presence of errors,
+	// adding a red border if there are validation errors for the field.
 	return (
 		<>
 			<div
