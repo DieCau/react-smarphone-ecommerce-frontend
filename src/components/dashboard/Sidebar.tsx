@@ -47,6 +47,11 @@ export const Sidebar = () => {
 				))}
 			</nav>
 
+			{/* The logout button is styled with a red background and includes an icon. */}
+			{/* It triggers the signOut action when clicked, logging the user out of the dashboard. */}
+			{/* The button is designed to be prominent and easily accessible, ensuring users can log out quickly. */}
+			{/* The button is responsive, with different styles for mobile and larger screens. */}
+			{/* The button is user-friendly, with clear text and an icon indicating the logout action. */}
 			<button
 				className='bg-red-500 w-full py-[10px] rounded-md flex items-center justify-center gap-2 font-semibold text-sm hover:underline'
 				onClick={handleLogout}
