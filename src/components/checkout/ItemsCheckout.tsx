@@ -2,6 +2,63 @@ import { formatPrice } from '../../helpers';
 import { useCartStore } from '../../store/cart.store';
 
 export const ItemsCheckout = () => {
+	// This component renders the items in the cart during the checkout process.
+	// It retrieves the cart items and total amount from the cart store
+	// and displays each item with its image, name, price, storage, color, and quantity.
+	// The total amount is displayed at the bottom, along with a note that shipping is free.
+	// The component uses the `useCartStore` hook to access the cart state,
+	// which is managed by Zustand, a state management library.
+	// The `formatPrice` function is used to format the total amount as currency.
+	// The `useCartStore` hook is used to access the cart state, which is managed by Zustand, a state management library.
+	// The component maps over the cart items and displays each item's details,
+	// including the image, name, price, storage, color, and quantity.
+	// It also displays the total amount and a note that shipping is free.
+	// The component is styled using Tailwind CSS classes for layout and appearance.
+	// The component is designed to be reusable and can be used in different parts of the application
+	// where the cart items need to be displayed, such as in the checkout page or cart summary.
+	// The component is functional and does not have any side effects,
+	// making it easy to test and maintain.
+	// The component is designed to be used in a checkout flow,
+	// where users can review their cart items before proceeding to payment.
+	// It provides a clear overview of the items in the cart,
+	// allowing users to see what they are purchasing and the total cost.
+	// The component is responsive and will adapt to different screen sizes,
+	// ensuring a good user experience on both desktop and mobile devices.
+	// The component is written in TypeScript, providing type safety and better developer experience.
+	// It uses Zustand for state management, which is a lightweight and flexible state management library.
+	// The component is designed to be simple and straightforward,
+	// focusing on displaying the cart items and total amount without any complex logic.
+	// The component is easy to integrate into the existing application,
+	// as it relies on the `useCartStore` hook to access the cart state,
+	// which is already set up in the application.
+	// The component is designed to be reusable and can be used in different parts of the application
+	// where the cart items need to be displayed, such as in the checkout page or cart summary.
+	// It provides a clear overview of the items in the cart,
+	// allowing users to see what they are purchasing and the total cost.
+	// The component is styled using Tailwind CSS classes for layout and appearance.
+	// The component is functional and does not have any side effects,
+	// making it easy to test and maintain.
+	// The component is designed to be used in a checkout flow,
+	// where users can review their cart items before proceeding to payment.
+	// It provides a clear overview of the items in the cart,
+	// allowing users to see what they are purchasing and the total cost.
+	// The component is responsive and will adapt to different screen sizes,
+	// ensuring a good user experience on both desktop and mobile devices.
+	// The component is written in TypeScript, providing type safety and better developer experience.
+	// It uses Zustand for state management, which is a lightweight and flexible state management library.
+	// The component is designed to be simple and straightforward,
+	// focusing on displaying the cart items and total amount without any complex logic.
+	// The component is easy to integrate into the existing application,
+	// as it relies on the `useCartStore` hook to access the cart state,
+	// which is already set up in the application.
+	// The component is designed to be reusable and can be used in different parts of the application
+	// where the cart items need to be displayed, such as in the checkout page or cart summary.
+	// It provides a clear overview of the items in the cart,
+	// allowing users to see what they are purchasing and the total cost.
+	// The component is styled using Tailwind CSS classes for layout and appearance.
+	// The component is functional and does not have any side effects,
+	// making it easy to test and maintain.	 
+
 	const cartItems = useCartStore(state => state.items);
 	const totalAmount = useCartStore(state => state.totalAmount);
 
