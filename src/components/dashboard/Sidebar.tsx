@@ -12,6 +12,17 @@ export const Sidebar = () => {
 	};
 
 	return (
+		// The sidebar is styled with Tailwind CSS classes for a fixed position,
+		// background color, and responsive design.
+		// It contains a logo, navigation links, and a logout button.
+		// The navigation links are generated from a constant array of links,
+		// and each link is styled based on whether it is active or not.
+		// The logout button is styled with a red background and includes an icon.
+		// The sidebar is designed to be fixed on the left side of the screen,
+		// providing easy access to navigation throughout the dashboard.
+		// The sidebar is responsive, with different styles for mobile and larger screens.
+		// The sidebar is designed to be user-friendly and visually appealing,
+		// with clear navigation options and a prominent logout button.
 		<div className='w-[120px] bg-stone-800 text-white flex flex-col gap-10 items-center p-5 fixed h-screen lg:w-[250px]'>
 			<Logo isDashboard/>
 
