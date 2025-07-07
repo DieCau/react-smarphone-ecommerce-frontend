@@ -8,6 +8,11 @@ interface Props {
 
 const tableHeaders = ['ID', 'Fecha', 'Estado', 'Total'];
 
+// This component displays a table of orders with clickable rows that navigate to the order details page.
+// Each row shows the order ID, creation date, status, and total amount.
+// The table is styled with Tailwind CSS for a clean and modern look.
+// The headers are defined in the `tableHeaders` array, and the orders are passed as a prop.
+// The `useNavigate` hook from React Router is used to handle navigation when a row is clicked.
 export const TableOrders = ({ orders }: Props) => {
   const navigate = useNavigate();
 
