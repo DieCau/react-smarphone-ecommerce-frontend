@@ -6,6 +6,13 @@ interface Props {
   content: JSONContent | Json;
 }
 
+// This component displays the product description using Tiptap editor.
+// It initializes the editor with the provided content and renders it in a styled container.
+// The content is displayed in a read-only mode, with specific styles applied for better readability.
+// The description is presented in a visually appealing format, with a title and proper spacing.
+// The editor is configured to be non-editable, ensuring that users can only view the description
+// without making any changes. The content is expected to be in JSON format compatible with Tiptap.
+// The component is designed to be reusable for different products by passing the content as a prop.
 export const ProductDescription = ({ content }: Props) => {
   const editor = useEditor({
     extensions: [StarterKit],
