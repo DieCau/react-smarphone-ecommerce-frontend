@@ -26,6 +26,8 @@ const brands = [
   },
 ];
 
+// This component displays a list of brands available in the store.
+// It includes a title, a description, and a grid of brand logos.
 export const Brands = () => {
   return (
     <div className="flex flex-col items-center gap-3 pt-16 pb-12">
