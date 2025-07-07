@@ -16,6 +16,8 @@ interface Props {
   variants: VariantProduct[];
 }
 
+// This component displays a product card with an image, name, price, and color options.
+// It allows users to select a color and add the product to the cart.
 export const CardProduct = ({
   img,
   name,

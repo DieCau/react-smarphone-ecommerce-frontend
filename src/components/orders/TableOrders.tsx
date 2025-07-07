@@ -18,6 +18,7 @@ export const TableOrders = ({ orders }: Props) => {
 
   return (
     <div className="relative w-full h-full">
+      {/* Tabla de Pedidos */}
       <table className="text-sm w-full caption-bottom overflow-auto">
         <thead className="border-b border-gray-200 pb-3">
           <tr className="text-sm font-bold">
