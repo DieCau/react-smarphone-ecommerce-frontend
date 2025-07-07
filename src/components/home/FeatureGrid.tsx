@@ -3,6 +3,11 @@ import { FaHammer } from 'react-icons/fa6';
 import { HiMiniReceiptRefund } from 'react-icons/hi2';
 import { MdLocalShipping } from 'react-icons/md';
 
+// This component displays a grid of features offered by the store.
+// It includes icons and descriptions for each feature, such as free shipping,
+// returns, 24/7 support, and warranty.
+// The grid is responsive, adjusting the number of columns based on the screen size.
+// The icons used are from the react-icons library, providing a modern and clean look.  
 export const FeatureGrid = () => {
   return (
     <div className="grid grid-cols-2 gap-8 mt-6 mb-16 lg:grid-cols-4 lg:gap-5">
