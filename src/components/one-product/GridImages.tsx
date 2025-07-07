@@ -4,6 +4,12 @@ interface Props {
   images: string[];
 }
 
+// This component displays a grid of images for a product.
+// It allows users to click on thumbnails to view a larger version of the image.
+// The active image is highlighted with a border, and the main image is displayed in a larger container.
+// The component is designed to be responsive, adapting to different screen sizes.
+// The images are expected to be passed as an array of strings, where each string is a URL to an image.
+// The component uses Tailwind CSS for styling, providing a clean and modern look.
 export const GridImages = ({ images }: Props) => {
   const [activeImage, setActiveImage] = useState(images[0]);
 
