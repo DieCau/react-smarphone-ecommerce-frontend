@@ -5,12 +5,22 @@ import { prepareProducts } from '../helpers';
 import { useFilteredProducts } from '../hooks';
 import { Pagination } from '../components/shared/Pagination';
 
+// Estados para la paginación y los filtros
+// Aquí se pueden agregar más filtros si es necesario
+// Por ejemplo, filtros por precio, características, etc.
+// Por ahora, solo se implementa el filtro por marcas
+// y la paginación de productos.
+// Este es el componente CellPhonesPage
+// Muestra una lista de celulares filtrados por marcas
+// y paginados. Utiliza el hook useFilteredProducts
+// para obtener los productos filtrados y paginados.
+// También utiliza el componente CardProduct para mostrar
+// cada celular y el componente ContainerFilter para
+// filtrar por marcas. La paginación se maneja con el
+// componente Pagination, que permite navegar entre
+// las diferentes páginas de productos.
+
 export const CellPhonesPage = () => {
-  // Estados para la paginación y los filtros
-  // Aquí se pueden agregar más filtros si es necesario
-  // Por ejemplo, filtros por precio, características, etc.
-  // Por ahora, solo se implementa el filtro por marcas
-  // y la paginación de productos.  
   const [page, setPage] = useState(1);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 

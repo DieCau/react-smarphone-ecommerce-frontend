@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export const Banner = () => {
   return (
-    <div className="relative bg-gray-900 text-white">
+    <div className="relative bg-gray-500 text-white">
       {/* IMAGEN DE FONDO */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-90 h-full"

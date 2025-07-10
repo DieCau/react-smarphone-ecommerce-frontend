@@ -6,13 +6,14 @@ interface Props {
   content: JSONContent | Json;
 }
 
-// This component displays the product description using Tiptap editor.
-// It initializes the editor with the provided content and renders it in a styled container.
-// The content is displayed in a read-only mode, with specific styles applied for better readability.
-// The description is presented in a visually appealing format, with a title and proper spacing.
-// The editor is configured to be non-editable, ensuring that users can only view the description
-// without making any changes. The content is expected to be in JSON format compatible with Tiptap.
-// The component is designed to be reusable for different products by passing the content as a prop.
+// Este componente muestra la descripción del producto mediante el editor Tiptap.
+// Inicializa el editor con el contenido proporcionado y lo renderiza en un contenedor con estilo.
+// El contenido se muestra en modo de solo lectura, con estilos específicos para una mejor legibilidad.
+// La descripción se presenta en un formato visualmente atractivo, con título y espaciado adecuado.
+// El editor está configurado para no ser editable, lo que garantiza que los usuarios solo puedan ver la descripción sin realizar cambios. 
+// Se espera que el contenido esté en formato JSON compatible con Tiptap.
+// El componente está diseñado para ser reutilizable para diferentes productos, pasando el contenido como propiedad.
+
 export const ProductDescription = ({ content }: Props) => {
   const editor = useEditor({
     extensions: [StarterKit],
@@ -26,7 +27,7 @@ export const ProductDescription = ({ content }: Props) => {
   });
 
   return (
-    <div className="mt-12">
+    <div className="container mx-auto p-4 mt-12">
       <h2 className="text-2xl font-bold text-center mb-8 underline">
         Descripción
       </h2>
