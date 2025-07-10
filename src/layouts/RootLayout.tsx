@@ -42,12 +42,13 @@ export const RootLayout = () => {
     // El diseño es compatible con las últimas versiones de TypeScript
     // El diseño es compatible con las últimas versiones de Supabase
     // El diseño es compatible con las últimas versiones de Zustand 
-    <div className="h-screen flex flex-col  font-montserrat">
+    <div className="h-screen flex flex-col font-montserrat">
       <Navbar />
 
       {pathname === '/' && <Banner />}
 
-      <main className="container my-8 flex-1">
+      <main> 
+       {/* className="container my-8 flex-1"> */}
         <Outlet />
       </main>
 

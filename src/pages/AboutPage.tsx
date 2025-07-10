@@ -7,7 +7,7 @@
 export const AboutPage = () => {
   return (
     <div className="space-y-5">
-      <h1 className="text-center text-4xl font-semibold tracking-tight mb-5">
+      <h1 className="text-center text-4xl font-semibold tracking-tight m-5">
         Nuestra empresa
       </h1>
 
@@ -17,7 +17,7 @@ export const AboutPage = () => {
         className="h-[500px] w-full object-cover"
       />
 
-      <div className="flex flex-col gap-4 tracking-tighter leading-7 text-sm font-medium text-slate-800">
+      <div className="container flex flex-col mx-auto mb-10 gap-4 tracking-tighter leading-7 text-sm font-medium text-slate-800">
         <p>
           SmartPhones es una tienda en línea que se dedica a la venta de
           celulares, fundada en 2021. Nuestro objetivo es ofrecer a nuestros
@@ -33,7 +33,7 @@ export const AboutPage = () => {
         </p>
 
         <h2 className="text-3xl font-semibold tracking-tighh mt-8 mb-4">
-          ¡No esperes más y compra tu celular en SmartPhones!
+          ¡No esperes más y compra tu próximo celular en SmartPhones!
         </h2>
 
         <p>

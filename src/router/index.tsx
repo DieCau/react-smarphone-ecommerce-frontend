@@ -15,7 +15,7 @@ import {
   DashboardNewProductPage,
   DashboardProductSlugPage,
   DashboardOrdersPage,
-  DashboardOrderPage,
+  DashboardOrderPage,  
 } from '../pages';
 import { ClientLayout } from '../layouts/ClientLayout';
 import { DashboardLayout } from '../layouts/DashboardLayout';

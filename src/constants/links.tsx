@@ -7,15 +7,14 @@ import {
   FaXTwitter,
 } from 'react-icons/fa6';
 
-// This array contains the links for the navigation bar
-// Each object in the array represents a link with an id, title, and href
-// The id is used to uniquely identify each link, which can be useful for rendering lists in
-// a React component
-// The title is the text that will be displayed for the link
-// The href is the URL that the link will navigate to when clicked
-// This structure allows for easy rendering of navigation links in a component
-// The links are used to navigate to different sections of the website, such as home, products
-// and about us
+// Este array contiene los enlaces para la barra de navegación.
+// Cada objeto de la matriz representa un enlace con un ID, un título y un href.
+// El ID se usa para identificar de forma única cada enlace, lo cual puede ser útil para renderizar listas en un componente de React.
+// El título es el texto que se mostrará para el enlace.
+// El href es la URL a la que se dirigirá el enlace al hacer clic.
+// Esta estructura facilita la renderización de enlaces de navegación en un componente.
+// Los enlaces se usan para navegar a diferentes secciones del sitio web, como Inicio, Celulares, y Nosotros.
+
 export const navbarLinks = [
   {
     id: 1,
@@ -29,20 +28,20 @@ export const navbarLinks = [
   },
   {
     id: 3,
-    title: 'Sobre Nosotros',
+    title: 'Nosotros',
     href: '/nosotros',
   },
 ];
+// Este array contiene los enlaces de RRSS con sus respectivos íconos.
+// Cada objeto del array representa una plataforma de redes sociales con un id, un título, un href y un componente de ícono.
+// Los íconos se importan de la biblioteca React-icons, específicamente del conjunto Font Awesome 6.
+// Los íconos utilizados son Facebook, Twitter, Instagram y TikTok.
+// Los href son las URL de las respectivas plataformas de redes sociales.
+// Esta estructura facilita la representación de enlaces de redes sociales en un componente.
+// Los íconos se utilizan para representar visualmente cada plataforma de redes sociales, mejorando la experiencia del usuario.
+// El id se utiliza para identificar de forma única cada enlace, lo que puede ser útil para representar listas en React.
+// Los enlaces se usan para navegar a las páginas correspondientes en las plataformas de redes sociales al hacer clic.
 
-// This array contains the social media links with their respective icons
-// Each object in the array represents a social media platform with an id, title, href,
-// and icon component
-// The icons are imported from the react-icons library, specifically from the Font Awesome 6 set
-// The icons used are Facebook, Twitter, Instagram, and TikTok
-// The hrefs are the URLs to the respective social media platforms
-// This structure allows for easy rendering of social media links in a component
-// The icons are used to visually represent each social media platform, enhancing user experience
-// The id is used to uniquely identify each link, which can be useful for rendering lists in
 export const socialLinks = [
   {
     id: 1,
