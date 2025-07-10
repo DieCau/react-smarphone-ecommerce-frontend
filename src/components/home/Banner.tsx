@@ -5,8 +5,8 @@ export const Banner = () => {
     <div className="relative bg-gray-900 text-white">
       {/* IMAGEN DE FONDO */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-70 h-full"
-        style={{ backgroundImage: 'url(/img/img-banner.jpg)' }}
+        className="absolute inset-0 bg-cover bg-center opacity-90 h-full"
+        style={{ backgroundImage: 'url(/img/img_Banner-2.jpg)' }}
       />
 
       {/* OVERLAY */}
@@ -24,7 +24,7 @@ export const Banner = () => {
 
         <Link
           to="/celulares"
-          className="bg-gray-900 hover:bg-gray-950 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out"
+          className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out"
         >
           Ver celulares
         </Link>
