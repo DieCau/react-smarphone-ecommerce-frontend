@@ -5,14 +5,14 @@ import { useLogin, useUser } from '../hooks';
 import { Loader } from '../components/shared/Loader';
 
 // LoginPage
+// Estados para el email y la contraseña
+// Inicialmente, se establecen valores de ejemplo para el email y la contraseña.
+// Estos valores se pueden cambiar por los que el usuario ingrese en el formulario.
+// El hook useLogin se utiliza para manejar el inicio de sesión del usuario.
+// El hook useUser se utiliza para obtener la sesión del usuario y el estado de carga.
+// Si el usuario ya está autenticado, se redirige a la página principal.
+// Si el usuario no está autenticado, se muestra el formulario de inicio de sesión. 
 export const LoginPage = () => {
-  // Estados para el email y la contraseña
-  // Inicialmente, se establecen valores de ejemplo para el email y la contraseña.
-  // Estos valores se pueden cambiar por los que el usuario ingrese en el formulario.
-  // El hook useLogin se utiliza para manejar el inicio de sesión del usuario.
-  // El hook useUser se utiliza para obtener la sesión del usuario y el estado de carga.
-  // Si el usuario ya está autenticado, se redirige a la página principal.
-  // Si el usuario no está autenticado, se muestra el formulario de inicio de sesión. 
 	const [email, setEmail] = useState('bdj04113@dcobe.com');
 	const [password, setPassword] = useState('Abc123');
 
