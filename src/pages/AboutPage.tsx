@@ -1,17 +1,18 @@
 export const AboutPage = () => {
   return (
-    // This is the AboutPage component
-    // It displays information about the company
-    // and its mission, vision, and values
-    // It also includes a contact section for inquiries
-    // and a background image to enhance the visual appeal
+    // Este es el componente AboutPage
+    // Muestra información sobre la empresa
+    // y su misión, visión y valores
+    // También incluye una sección de contacto para consultas
+    // y una imagen de fondo para realzar el atractivo visual
+    // de la página.
     <div className="space-y-5">
       <h1 className="text-center text-4xl font-semibold tracking-tight mb-5">
         Nuestra empresa
       </h1>
 
       <img
-        src="https://plus.unsplash.com/premium_photo-1682716270464-9a91cbbcf3b7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWRpZmljaW8lMjBkZSUyMGxhJTIwZW1wcmVzYXxlbnwwfHwwfHx8MA%3D%3D"
+        src="https://cloudfront-us-east-1.images.arcpublishing.com/artear/PG5RD5YNLZGIVCQNSDQNYGEIBI.jpg"
         alt="Imagen de fondo"
         className="h-[500px] w-full object-cover"
       />
@@ -26,8 +27,8 @@ export const AboutPage = () => {
         </p>
 
         <p>
-          En SmartPhones podrás encontrar una amplia variedad de celulares
-          de las mejores marcas. Además, contamos con promociones y descuentos
+          En SmartPhones podrás encontrar una amplia variedad de celulares de
+          las mejores marcas. Además, contamos con promociones y descuentos
           exclusivos para que puedas comprar tu celular al mejor precio.
         </p>
 
@@ -38,10 +39,8 @@ export const AboutPage = () => {
         <p>
           Para más información, no dudes en ponerte en contacto con nosotros, a
           través de nuestro correo electrónico:
-          <a href="mailto:correo@SmartPhones.com">
-            correo@smartPhones.com
-          </a>{' '}
-          o llamado al <a href="#">3815678913</a>
+          <a href="mailto:correo@SmartPhones.com">correo@smartPhones.com</a> o
+          llamado al <a href="#">3815678913</a>
         </p>
       </div>
     </div>
