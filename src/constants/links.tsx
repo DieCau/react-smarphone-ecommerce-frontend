@@ -69,6 +69,17 @@ export const socialLinks = [
   },
 ];
 
+// Este array contiene los enlaces del dashboard de administración.
+// Cada objeto del array representa una sección del dashboard con un id, un título, un href y un ícono.
+// Los íconos se importan de la biblioteca React-icons, específicamente del conjunto Font Awesome 6.
+// Los íconos utilizados son para representar productos y órdenes.
+// Los href son las URL a las que se dirigirá el enlace al hacer clic.
+// Esta estructura facilita la representación de enlaces de navegación en el dashboard de administración.
+// Los íconos se utilizan para representar visualmente cada sección del dashboard, mejorando la experiencia del usuario.
+// El id se utiliza para identificar de forma única cada enlace, lo que puede ser útil para renderizar listas en React.
+// Los enlaces se usan para navegar a las páginas correspondientes en el dashboard al hacer clic.
+// Este enfoque modular permite una fácil adición o eliminación de secciones en el dashboard sin afectar el resto del código.
+
 export const dashboardLinks = [
   {
     id: 1,
