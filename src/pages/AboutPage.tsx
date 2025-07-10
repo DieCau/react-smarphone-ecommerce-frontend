@@ -1,11 +1,11 @@
+// Este es el componente AboutPage
+// Muestra información sobre la empresa
+// y su misión, visión y valores
+// También incluye una sección de contacto para consultas
+// y una imagen de fondo para realzar el atractivo visual
+// de la página.
 export const AboutPage = () => {
   return (
-    // Este es el componente AboutPage
-    // Muestra información sobre la empresa
-    // y su misión, visión y valores
-    // También incluye una sección de contacto para consultas
-    // y una imagen de fondo para realzar el atractivo visual
-    // de la página.
     <div className="space-y-5">
       <h1 className="text-center text-4xl font-semibold tracking-tight mb-5">
         Nuestra empresa
@@ -13,7 +13,7 @@ export const AboutPage = () => {
 
       <img
         src="https://cloudfront-us-east-1.images.arcpublishing.com/artear/PG5RD5YNLZGIVCQNSDQNYGEIBI.jpg"
-        alt="Imagen de fondo"
+        alt="Empresa SmartPhones"
         className="h-[500px] w-full object-cover"
       />
 
@@ -40,7 +40,7 @@ export const AboutPage = () => {
           Para más información, no dudes en ponerte en contacto con nosotros, a
           través de nuestro correo electrónico:
           <a href="mailto:correo@SmartPhones.com">correo@smartPhones.com</a> o
-          llamado al <a href="#">3815678913</a>
+          llamado al <a href="#">381 567-8913</a>
         </p>
       </div>
     </div>

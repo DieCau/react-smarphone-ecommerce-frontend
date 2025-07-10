@@ -21,10 +21,11 @@ import { ClientLayout } from '../layouts/ClientLayout';
 import { DashboardLayout } from '../layouts/DashboardLayout';
 
 // Router
-// This file defines the application's routing structure using React Router.
-// It sets up the main routes for the application, including public pages like Home, Cell Phones, About, Login, and Register,
-// as well as protected routes for user accounts and dashboard functionalities.
-// The `createBrowserRouter` function is used to create a router instance with nested routes. 
+// Este archivo define la estructura de enrutamiento de la aplicación usando React Router.
+// Configura las rutas principales de la aplicación, incluyendo páginas públicas como Inicio, Celulares, Acerca de, 
+// Iniciar sesión y Registrarse, así como rutas protegidas para cuentas de usuario y funcionalidades del panel de control.
+// La función `createBrowserRouter` se utiliza para crear una instancia de enrutador con rutas anidadas.
+
 export const router = createBrowserRouter([
   {
     path: '/',
