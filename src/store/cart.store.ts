@@ -16,10 +16,12 @@ export interface CartState {
 }
 
 // Store API
-// This is the store API that defines the state and actions for the cart.
-// It includes methods to add, remove, update items, and clean the cart.
-// The state includes the items in the cart, total items, and total amount.
-// The store is created using Zustand with devtools and persist middleware for debugging and state persistence.
+// Esta es la API de la tienda que define el estado y las acciones del carrito.
+// Incluye métodos para agregar, eliminar, actualizar artículos y limpiar el carrito.
+// El estado incluye los artículos en el carrito, el total de artículos y el importe total.
+// La tienda se crea usando Zustand con herramientas de desarrollo y middleware de 
+// persistencia para la depuración y la persistencia del estado.
+
 const storeApi: StateCreator<CartState> = (set) => ({
   items: [],
 
