@@ -4,15 +4,15 @@ import { Loader } from '../components/shared/Loader';
 import { TableOrders } from '../components/orders/TableOrders';
 
 // Component OrdersUserPage
+// Custom Hook para obtener pedidos
+// Devuelve un objeto con los datos y un estado de carga
+// Si los datos aún no se han cargado, devolverá un array vacío
+// Si los datos se han cargado, devolverá los pedidos
+// El hook también gestiona el estado de carga
+// y devuelve un indicador de carga mientras se obtienen los datos
+// El hook se utiliza para obtener los pedidos del servidor
+// y mostrarlos en una tabla
 export const OrdersUserPage = () => {
-  // Custom hook to fetch orders
-  // It returns an object with the data and a loading state
-  // If the data is not yet loaded, it will return an empty array
-  // If the data is loaded, it will return the orders
-  // The hook also handles the loading state
-  // and returns a loading spinner while the data is being fetched
-  // The hook is used to fetch the orders from the server
-  // and display them in a table
   
   const { data: orders, isLoading } = useOrders();
 
