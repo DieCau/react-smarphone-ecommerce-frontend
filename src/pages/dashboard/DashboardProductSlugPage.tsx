@@ -1,12 +1,11 @@
 import { FormProduct } from '../../components/dashboard';
 
+// Este componente se utiliza para editar un producto en el panel de administración.
+// Genera un formulario para editar los detalles del producto.
+// El formulario se muestra con el título "Editar Producto".
+// Se espera que se utilice en una ruta que proporcione el ID del producto en la URL.
+// El componente importa el componente FormProduct desde el directorio 'components/dashboard'.
 export const DashboardProductSlugPage = () => {
-  // This component is used to edit a product in the admin dashboard.
-  // It renders a form for editing the product details.
-  // The form is displayed with the title "Editar Producto".
-  // It is expected to be used in a route that provides the product ID in the URL.
-  // The component imports the FormProduct component from the 'components/dashboard' directory.
-   
   return (
     <div>
       <FormProduct titleForm="Editar Producto" />
