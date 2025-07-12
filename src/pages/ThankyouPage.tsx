@@ -7,26 +7,26 @@ import { useEffect } from 'react';
 import { supabase } from '../supabase/client';
 
 // ThankyouPage
+// Obtiene el ID de la orden desde los parámetros de la URL
+// Utiliza el hook useOrder para obtener los datos de la orden
+// y el estado de carga y error.
+// Utiliza el hook useUser para obtener la sesión del usuario y el estado de carga.
+// Si hay un error al cargar la orden, muestra un mensaje de error.
+// Si la orden se está cargando o no hay datos, muestra un loader.
+// Si la sesión del usuario se está cargando, muestra un loader.
+// Si la orden se carga correctamente, muestra los detalles de la orden
+// y un mensaje de agradecimiento al usuario.
+// Además, se asegura de que el usuario esté autenticado y redirige a la
+// página de login si no lo está.
+// Finalmente, muestra los detalles del pedido, incluyendo los productos,
+// el total, la información de contacto, el método de pago y la dirección de envío
+// y un botón para seguir comprando.
+// También muestra un mensaje de agradecimiento al usuario por su compra.
+// El componente utiliza el icono CiCircleCheck para mostrar un check de confirmación.
+// El componente utiliza el helper formatPrice para formatear los precios de los productos.
+// El componente utiliza el hook useParams para obtener el ID de la orden desde la URL
+// y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
 export const ThankyouPage = () => {
-  // Obtiene el ID de la orden desde los parámetros de la URL
-  // Utiliza el hook useOrder para obtener los datos de la orden
-  // y el estado de carga y error.
-  // Utiliza el hook useUser para obtener la sesión del usuario y el estado de carga.
-  // Si hay un error al cargar la orden, muestra un mensaje de error.
-  // Si la orden se está cargando o no hay datos, muestra un loader.
-  // Si la sesión del usuario se está cargando, muestra un loader.
-  // Si la orden se carga correctamente, muestra los detalles de la orden
-  // y un mensaje de agradecimiento al usuario.
-  // Además, se asegura de que el usuario esté autenticado y redirige a la
-  // página de login si no lo está.
-  // Finalmente, muestra los detalles del pedido, incluyendo los productos,
-  // el total, la información de contacto, el método de pago y la dirección de envío
-  // y un botón para seguir comprando.
-  // También muestra un mensaje de agradecimiento al usuario por su compra.
-  // El componente utiliza el icono CiCircleCheck para mostrar un check de confirmación.
-  // El componente utiliza el helper formatPrice para formatear los precios de los productos.
-  // El componente utiliza el hook useParams para obtener el ID de la orden desde la URL
-  // y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
   const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, isError } = useOrder(Number(id));
@@ -46,39 +46,39 @@ export const ThankyouPage = () => {
 
   if (isLoading || !data || isLoadingSession) return <Loader />;
 
+  // Renderiza la página de agradecimiento con los detalles de la orden
+  // y un mensaje de confirmación.
+  // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
+  // Utiliza el componente Link de react-router-dom para navegar a la página de inicio
+  // y el icono CiCircleCheck de react-icons para mostrar un check de confirmación
+  // Utiliza el helper formatPrice para formatear los precios de los productos.
+  // Utiliza el hook useParams para obtener el ID de la orden desde la URL
+  // y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
+  // Utiliza el hook useEffect para escuchar los cambios en el estado de autenticación
+  // y redirigir al usuario a la página de login si no está autenticado.
+  // Utiliza el hook useOrder para obtener los datos de la orden y el estado de carga y error.
+  // Utiliza el hook useUser para obtener la sesión del usuario
+  // y el estado de carga.
+  // Utiliza el icono CiCircleCheck para mostrar un check de confirmación.
+  // Utiliza el helper formatPrice para formatear los precios de los productos.
+  // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
+  // Utiliza el componente Link de react-router-dom para navegar a la página de inicio.
+  // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
+  // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
+  // Utiliza el componente useNavigate para redirigir al usuario a la página de login
+  // si no está autenticado.
+  // Utiliza el componente useEffect para escuchar los cambios en el estado de autenticación
+  // y redirigir al usuario a la página de login si no está autenticado.
+  // Utiliza el componente useOrder para obtener los datos de la orden y el estado de carga y error.
+  // Utiliza el componente useUser para obtener la sesión del usuario y el estado de carga.
+  // Utiliza el componente formatPrice para formatear los precios de los productos.
+  // Utiliza el componente CiCircleCheck para mostrar un check de confirmación.
+  // Utiliza el componente Link para navegar a la página de inicio.
+  // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
+  // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
+  // Utiliza el componente useNavigate para redirigir al usuario a la página de login
+  // si no está autenticado.  
   return (
-    // Renderiza la página de agradecimiento con los detalles de la orden
-    // y un mensaje de confirmación.
-    // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
-    // Utiliza el componente Link de react-router-dom para navegar a la página de inicio
-    // y el icono CiCircleCheck de react-icons para mostrar un check de confirmación
-    // Utiliza el helper formatPrice para formatear los precios de los productos.
-    // Utiliza el hook useParams para obtener el ID de la orden desde la URL
-    // y el hook useNavigate para redirigir al usuario a la página de login si no está autenticado.
-    // Utiliza el hook useEffect para escuchar los cambios en el estado de autenticación
-    // y redirigir al usuario a la página de login si no está autenticado.
-    // Utiliza el hook useOrder para obtener los datos de la orden y el estado de carga y error.
-    // Utiliza el hook useUser para obtener la sesión del usuario
-    // y el estado de carga.
-    // Utiliza el icono CiCircleCheck para mostrar un check de confirmación.
-    // Utiliza el helper formatPrice para formatear los precios de los productos.
-    // Utiliza clases de Tailwind CSS para el estilo y diseño responsivo.
-    // Utiliza el componente Link de react-router-dom para navegar a la página de inicio.
-    // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
-    // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
-    // Utiliza el componente useNavigate para redirigir al usuario a la página de login
-    // si no está autenticado.
-    // Utiliza el componente useEffect para escuchar los cambios en el estado de autenticación
-    // y redirigir al usuario a la página de login si no está autenticado.
-    // Utiliza el componente useOrder para obtener los datos de la orden y el estado de carga y error.
-    // Utiliza el componente useUser para obtener la sesión del usuario y el estado de carga.
-    // Utiliza el componente formatPrice para formatear los precios de los productos.
-    // Utiliza el componente CiCircleCheck para mostrar un check de confirmación.
-    // Utiliza el componente Link para navegar a la página de inicio.
-    // Utiliza el componente Loader para mostrar un loader mientras se cargan los datos.
-    // Utiliza el componente useParams para obtener el ID de la orden desde la URL.
-    // Utiliza el componente useNavigate para redirigir al usuario a la página de login
-    // si no está autenticado.  
     <div className="flex flex-col h-screen">
       <header className="text-black flex items-center justify-center flex-col px-10 py-12">
         <Link
