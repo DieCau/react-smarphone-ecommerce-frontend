@@ -6,11 +6,11 @@ import { formatPrice } from '../../helpers';
 
 const tableHeaders = ['Producto', 'Cantidad', 'Total'];
 
+// Este componente muestra los detalles de un pedido específico en el panel de administración.
+// Obtiene los datos del pedido mediante el ID del pedido de los parámetros de la URL y 
+// los muestra en formato de tabla, incluyendo detalles del producto, cantidades e importes totales.
+// También incluye un botón de retroceso para navegar a la página anterior.
 export const DashboardOrderPage = () => {
-  // This component displays the details of a specific order in the admin dashboard.
-  // It fetches the order data using the order ID from the URL parameters and displays it
-  // in a table format, including product details, quantities, and total amounts. 
-  // It also provides a back button to navigate to the previous page.
   
   const navigate = useNavigate();
 
