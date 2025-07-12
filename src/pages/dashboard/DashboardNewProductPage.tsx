@@ -1,11 +1,13 @@
 import { FormProduct } from '../../components/dashboard';
 
+// Esta página se utiliza para agregar un nuevo producto.
+// Representa el componente FormProduct con un título "Agregar Producto".
+// El componente FormProduct gestiona la lógica del 
+// formulario para agregar un producto.
+// y se importa desde el directorio de componentes/panel.
+
 export const DashboardNewProductPage = () => {
-  // This page is used to add a new product
-  // It renders the FormProduct component with a title
-  // "Agregar Producto" (Add Product)
-  // The FormProduct component handles the form logic for adding a product
-  // and is imported from the components/dashboard directory
+
   return (
     <div>
       <FormProduct titleForm="Agregar Producto" />
