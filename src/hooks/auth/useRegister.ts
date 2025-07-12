@@ -20,7 +20,7 @@ export const useRegister = () => {
     },
     onError: (err) => {
       toast.error(err.message, {
-        position: 'bottom-right',
+        position: 'top-right',
       });
     },
   });

@@ -10,16 +10,16 @@ import { useCreateOrder } from '../../hooks';
 import { useCartStore } from '../../store/cart.store';
 import { ImSpinner2 } from 'react-icons/im';
 
+// Formulario con el esquema de direcciones
+// Configurar la gestión del estado del formulario
+// usando react-hook-form y zod para la validación.
+// El formulario incluye campos para detalles de la dirección,
+// métodos de envío e información de pago.
+// También gestiona la creación de pedidos y la gestión del carrito
+// usando hooks personalizados y una tienda de carrito global.
+// Si la creación del pedido está pendiente, se muestra un indicador de carga.
+// Una vez creado el pedido correctamente, se limpia el carrito.
 export const FormCheckout = () => {
-  // Initialize the form with the address schema
-  // and set up the form state management
-  // using react-hook-form and zod for validation.
-  // The form includes fields for address details,
-  // shipping methods, and payment information.
-  // It also handles order creation and cart management
-  // using custom hooks and a global cart store.
-  // If the order creation is pending, it displays a loading spinner.
-  // Once the order is successfully created, it cleans the cart.
   const {
     register,
     formState: { errors },
@@ -34,14 +34,12 @@ export const FormCheckout = () => {
   const cartItems = useCartStore((state) => state.items);
   const totalAmount = useCartStore((state) => state.totalAmount);
 
+  // Preparar los datos de entrada del pedido asignando los artículos del carrito 
+  // al formato requerido, incluyendo el importe total y la dirección.
+  // Luego, se ejecuta la mutación createOrder con los datos preparados.
+  // Si la creación del pedido está pendiente, muestre un indicador de carga.
+  // La entrada del pedido incluye la dirección, los artículos del carrito y el importe total.
   const onSubmit = handleSubmit((data) => {
-    // Prepare the order input data by mapping
-    // the cart items to the required format
-    // and including the total amount and address details.
-    // Then call the createOrder mutation with the prepared data.
-    // On success, clean the cart.
-    // If the order creation is pending, show a loading spinner.
-    // The order input includes the address, cart items, and total amount.
     const orderInput = {
       address: data,
       cartItems: cartItems.map((item) => ({
@@ -79,7 +77,7 @@ export const FormCheckout = () => {
             register={register}
             errors={errors}
             name="addressLine1"
-            placeholder="Dirección principal"
+            placeholder="Dirección Principal"
           />
 
           <InputAddress
@@ -92,15 +90,15 @@ export const FormCheckout = () => {
           <InputAddress
             register={register}
             errors={errors}
-            name="state"
-            placeholder="Estado / Provincia"
+            name="city"
+            placeholder="Ciudad"
           />
 
           <InputAddress
             register={register}
             errors={errors}
-            name="city"
-            placeholder="Ciudad"
+            name="state"
+            placeholder="Provincia"
           />
 
           <InputAddress
@@ -114,7 +112,7 @@ export const FormCheckout = () => {
             className="border border-slate-200 rounded-md p-3"
             {...register('country')}
           >
-            <option value="Ecuador">Ecuador</option>
+            <option value="Argentina">Argentina</option>
           </select>
         </div>
 
@@ -134,9 +132,9 @@ export const FormCheckout = () => {
 
           <div className="bg-stone-100 text-[13px] p-5 space-y-0.5 border border-gray-200 rounded-es-md rounded-ee-md">
             <p>Compra a traves de transferencia bancaria</p>
-            <p>BANCO PICHINCHA</p>
-            <p>Razón Social: CelularesBaratos</p>
-            <p>RUC: 123456789000</p>
+            <p>BANCO NACION ARGENTINA</p>
+            <p>Razón Social: SmartPhones</p>
+            <p>RUT-PF: 123456789000</p>
             <p>Tipo de cuenta: Corriente</p>
             <p>Número de cuenta: 1234567890</p>
             <p>

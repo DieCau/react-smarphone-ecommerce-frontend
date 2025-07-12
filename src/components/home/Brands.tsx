@@ -8,11 +8,11 @@ const brands = [
     alt: 'Samsung',
   },
   {
-    image: '/img/brands/xiaomi-logo.webp',
+    image: '/img/brands/xiomi.com.png',
     alt: 'Xiaomi',
   },
   {
-    image: '/img/brands/realme-logo.webp',
+    image: '/img/brands/realme-free.png',
     alt: 'Realme',
   },
   {

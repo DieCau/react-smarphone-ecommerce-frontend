@@ -46,7 +46,7 @@ export const RegisterPage = () => {
   if (session) return <Navigate to="/" />;
 
   return (
-    <div className="h-full flex flex-col items-center mt-12 gap-5">
+    <div className="h-full flex flex-col items-center m-5 gap-5">
       <h1 className="text-4xl font-bold capitalize">Regístrate</h1>
 
       <p className="text-sm font-medium">
@@ -110,7 +110,7 @@ export const RegisterPage = () => {
           </form>
           <p className="text-sm text-stone-800">
             ¿Ya tienes una cuenta?
-            <Link to="/registro" className="underline ml-2">
+            <Link to="/login" className="underline ml-2">
               Inicia sesión
             </Link>
           </p>
