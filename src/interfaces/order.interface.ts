@@ -1,4 +1,4 @@
-// This file defines TypeScript interfaces for handling order-related data structures in a client application.
+// Este archivo define interfaces TypeScript para manejar estructuras de datos relacionadas con pedidos en una aplicación cliente.
 export interface OrderInput {
   address: {
     addressLine1: string;
@@ -16,7 +16,7 @@ export interface OrderInput {
   totalAmount: number;
 }
 
-// This interface represents the structure of an order item in the context of a shopping cart or order management system.
+// Esta interfaz representa la estructura de un artículo de pedido en el contexto de un carrito de compras o un sistema de gestión de pedidos.
 export interface OrderItemSingle {
   created_at: string;
   id: number;
@@ -24,6 +24,7 @@ export interface OrderItemSingle {
   total_amount: number;
 }
 
+// Esta interfaz extiende OrderItemSingle para incluir detalles del cliente asociado al pedido.
 export interface OrderWithCustomer {
   id: number;
   status: string;
