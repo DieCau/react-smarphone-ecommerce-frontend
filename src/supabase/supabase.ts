@@ -7,8 +7,8 @@ export type Json =
   | Json[];
 
 
-  // This file defines the structure of the database schema for a Supabase project.
-// It includes the types for tables, views, functions, enums, and composite types.
+// Este archivo define la estructura del esquema de la base de datos para un proyecto de Supabase.
+// Incluye los tipos de tablas, vistas, funciones, enumeraciones y tipos compuestos.
 export type Database = {
   public: {
     Tables: {
