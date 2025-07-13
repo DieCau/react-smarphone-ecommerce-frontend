@@ -1,16 +1,15 @@
 import { useQueries } from '@tanstack/react-query';
 import { getRandomProducts, getRecentProducts } from '../../actions';
 
+// Este hook se utiliza para obtener productos recientes y populares para la página de inicio.
+// Utiliza el hook `useQueries` de `@tanstack/react-query` para realizar varias consultas en paralelo.
+// La primera consulta obtiene productos recientes y la segunda, productos populares.
+// Las claves de consulta se establecen en 'recentProducts' y 'popularProducts' para identificar estas consultas de forma única.
+// Las funciones de consulta son getRecentProducts y getRandomProducts, respectivamente.
+// El hook devuelve un array de objetos de consulta, donde cada objeto contiene la clave de consulta, la función de consulta y otra información relevante.
+// El hook también devuelve los booleanos `isLoading` y `isError`, que indican si las consultas aún se están cargando 
+// o si se produjo un error durante la consulta.
 export const useHomeProducts = () => {
-  // This hook is used to fetch recent and popular products for the home page.
-  // It uses the `useQueries` hook from `@tanstack/react-query` to
-  // perform multiple queries in parallel.
-  // The first query fetches recent products, and the second query fetches popular products.
-  // The query keys are set to 'recentProducts' and 'popularProducts' to uniquely
-  // identify these queries.
-  // The query functions are getRecentProducts and getRandomProducts respectively.  
-  // The hook returns an array of query objects, where each object contains the query key, query function, and other relevant information.
-  // The hook also returns a boolean isLoading and a boolean isError, which indicate whether the queries are still loading or if there was an error during the query.
   const results = useQueries({
     queries: [
       {
