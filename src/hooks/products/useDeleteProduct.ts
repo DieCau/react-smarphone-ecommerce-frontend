@@ -2,14 +2,14 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { deleteProduct } from '../../actions';
 import toast from 'react-hot-toast';
 
+// Este hook se usa para eliminar un producto.
+// Utiliza el hook `useMutation` de `@tanstack/react-query` para ejecutar 
+// la acción `deleteProduct` y gestionar el estado de carga.
+// El `queryClient` se usa para invalidar la consulta `products` tras una eliminación exitosa.
+// La función `mutate` se usa para activar la eliminación, e `isPending` indica si la mutación está en progreso.
+// En caso de éxito, invalida la consulta `products` para actualizar la lista de productos.
+// En caso de error, lo registra y muestra una notificación.
 export const useDeleteProduct = () => {
-  // This hook is used to delete a product.
-  // It uses the `useMutation` hook from `@tanstack/react-query` to
-  // perform the deleteProduct action and manage the loading state.
-  // The queryClient is used to invalidate the 'products' query after a successful deletion.
-  // The `mutate` function is used to trigger the deletion, and `isPending` indicates if the mutation is in progress.
-  // On success, it invalidates the 'products query to refresh the product list.
-  // On error, it logs the error and shows a toast notification.  
   const queryClient = useQueryClient();
 
   const { mutate, isPending } = useMutation({
@@ -25,7 +25,7 @@ export const useDeleteProduct = () => {
     onError: (error) => {
       console.log(error);
       toast.error('Ocurrió un error al eliminar el producto', {
-        position: 'bottom-right',
+        position: 'top-right',
       });
     },
   });
