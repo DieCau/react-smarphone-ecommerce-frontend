@@ -1,6 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { getFilteredProducts } from '../../actions';
 
+// Este hook se utiliza para obtener productos filtrados según la página y las marcas proporcionadas.
+// Utiliza el hook `useQuery` de `@tanstack/react-query` para obtener los productos filtrados del servidor.
+// La clave de consulta se establece en ['filteredProducts', page, brands] para identificar esta consulta de forma única.
+// La función de consulta es `getFilteredProducts`, que obtiene los productos según la página y las marcas actuales.
+// Devuelve un objeto que contiene los datos, el estado de carga y el número total de productos.
 export const useFilteredProducts = ({
   page,
   brands,
@@ -8,11 +13,6 @@ export const useFilteredProducts = ({
   page: number;
   brands: string[];
 }) => {
-  // This hook is used to fetch filtered products based on the provided page and brands.
-  // It uses the `useQuery` hook from `@tanstack/react-query` to fetch the filtered products from the server.
-  // The query key is set to ['filteredProducts', page, brands] to uniquely identify this query.
-  // The query function is getFilteredProducts which fetches the products based on the current page and brands.
-  // It returns an object containing the data, isLoading state, and totalProducts count.
   const { data, isLoading } = useQuery({
     queryKey: ['filteredProducts', page, brands],
     queryFn: () => getFilteredProducts({ page, brands }),
