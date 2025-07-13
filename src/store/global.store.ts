@@ -16,12 +16,11 @@ export interface GlobalState {
 }
 
 // Store API
-// This is the store API that defines the state and actions for the global state.
-// It includes methods to open and close a sheet, set the active navigation state for mobile,
-// and manage the content of the sheet.
-// The state includes whether the sheet is open, the content of the sheet, and the active
-// navigation state for mobile.
-// The store is created using Zustand with devtools middleware for debugging.
+// Esta es la API de la tienda que define el estado y las acciones para el estado global.
+// Incluye métodos para abrir y cerrar una hoja, establecer el estado de navegación activo 
+// para dispositivos móviles y administrar el contenido de la hoja.
+// El estado incluye si la hoja está abierta, su contenido y el estado de navegación activo para dispositivos móviles.
+// La tienda se crea usando Zustand con middleware devtools para la depuración.
 
 const storeApi: StateCreator<GlobalState> = (set) => ({
   isSheetOpen: false,
