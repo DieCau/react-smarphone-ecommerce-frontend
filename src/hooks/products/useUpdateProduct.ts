@@ -4,20 +4,17 @@ import type { ProductInput } from '../../interfaces';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
+// Este hook se usa para actualizar un producto.
+// Utiliza el hook `useMutation` de `@tanstack/react-query` para ejecutar la acción `updateProduct` y gestionar el estado de carga.
+// QueryClient se usa para invalidar la consulta `products` tras una actualización exitosa.
+// La función `mutate` se usa para activar la actualización, e `isPending` indica si la mutación está en curso.
+// En caso de éxito, invalida la consulta `products` para actualizar la lista de productos.
+// En caso de error, lo registra y muestra una notificación.
+// El hook devuelve un objeto que contiene la función `mutate` y el estado `isPending`.
+// La función `mutate` se puede llamar con los datos actualizados del producto para activar la operación de actualización.
+// El estado `isPending` se puede usar para mostrar un indicador de carga mientras la actualización está en curso. 
+
 export const useUpdateProduct = (productId: string) => {
-  // This hook is used to update a product.
-  // It uses the `useMutation` hook from `@tanstack/react-query` to
-  // perform the updateProduct action and manage the loading state.
-  // The queryClient is used to invalidate the 'products' query after a successful update.
-  // The `mutate` function is used to trigger the update, and `isPending` indicates if the mutation is in progress.
-  // On success, it invalidates the 'products' query to refresh the product list.
-  // On error, it logs the error and shows a toast notification.
-  // The hook returns an object containing the `mutate` function and the `isPending` state.
-  // The `mutate` function can be called with the updated product data to trigger the update operation.
-  // The `isPending` state can be used to show a loading indicator while the update is in progress.
-  // Example usage:
-  // const { mutate, isPending } = useUpdateProduct(productId);
-  // mutate({ name: 'New Product Name', price: 100 });  
   
   const queryClient = useQueryClient();
   const navigate = useNavigate();
