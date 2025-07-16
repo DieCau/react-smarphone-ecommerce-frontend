@@ -3,6 +3,7 @@ import type { FieldErrors, UseFormSetValue } from 'react-hook-form';
 import type { ProductFormValues } from '../../../lib/validators';
 import StarterKit from '@tiptap/starter-kit';
 import { useEffect, type ReactNode } from 'react';
+
 interface Props {
 	setValue: UseFormSetValue<ProductFormValues>;
 	errors: FieldErrors<ProductFormValues>;
