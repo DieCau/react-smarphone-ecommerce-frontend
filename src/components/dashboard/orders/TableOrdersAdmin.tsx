@@ -16,12 +16,13 @@ interface Props {
   orders: OrderWithCustomer[];
 }
 
+// Este componente muestra una tabla de pedidos para los usuarios administradores.
+// Muestra el nombre, el correo electrónico, la fecha del pedido, el estado y el importe total del cliente.
+// El estado se puede cambiar mediante un menú desplegable.
+// Al hacer clic en un pedido, se accede a la página de detalles del pedido.
+// El componente utiliza enlaces personalizados para cambiar el estado del pedido y dar formato a las fechas y los precios.
+
 export const TableOrdersAdmin = ({ orders }: Props) => {
-  // This component renders a table of orders for admin users.
-  // It displays the customer's name, email, order date, status, and total amount.
-  // The status can be changed using a dropdown menu.
-  // Clicking on an order navigates to the order details page.
-  // The component uses custom hooks for changing the order status and formatting dates and prices.
   const navigate = useNavigate();
 
   const { mutate } = useChangeStatusOrder();
