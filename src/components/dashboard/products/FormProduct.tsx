@@ -36,6 +36,19 @@ export const FormProduct = ({ titleForm }: Props) => {
     resolver: zodResolver(productSchema),
   });
 
+  // useParams se utiliza para obtener los parámetros de la URL, en este caso, el slug del producto.
+  // Esto es útil para determinar si se está creando un nuevo producto o editando uno existente
+  // y para cargar los datos del producto si se está editando.
+  // El slug es una cadena única que identifica al producto en la URL.
+  // Si el slug está presente, significa que se está editando un producto existente.
+  // Si no está presente, significa que se está creando un nuevo producto.
+  // useParams devuelve un objeto con los parámetros de la URL, en este caso, el slug del producto.
+  // El tipo de slug se define como una cadena, lo que significa que
+  // se espera que el slug sea una cadena de texto que representa el identificador del producto
+  // en la URL. Si el slug no está presente, se utilizará una cadena vacía por defecto.
+  // Esto permite que el componente maneje tanto la creación como la edición de productos
+  // de manera flexible y reutilizable.
+  
   const { slug } = useParams<{ slug: string }>();
 
   const { product, isLoading } = useProduct(slug || '');
