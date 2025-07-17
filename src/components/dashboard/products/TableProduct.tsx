@@ -41,14 +41,15 @@ export const TableProduct = () => {
     }
   };
 
-// Esta función gestiona el cambio de la variante seleccionada de un producto.
-// Actualiza el estado con el índice de la variante seleccionada para el ID del producto dado.
-// Se utiliza para mostrar los detalles correctos de la variante en la tabla.
-// El índice de la variante seleccionada se almacena en el objeto de estado `selectedVariants`.
-// La clave es el ID del producto y el valor es el índice de la variante seleccionada.
-// Esto permite al usuario cambiar entre diferentes variantes de un producto.
-// Cuando el usuario selecciona una variante diferente del menú desplegable, se llama a esta función para actualizar el estado.
-// La variante seleccionada se utiliza para mostrar la información correcta de precio y stock en la tabla.
+  // Esta función gestiona el cambio de la variante seleccionada de un producto.
+  // Actualiza el estado con el índice de la variante seleccionada para el ID del producto dado.
+  // Se utiliza para mostrar los detalles correctos de la variante en la tabla.
+  // El índice de la variante seleccionada se almacena en el objeto de estado `selectedVariants`.
+  // La clave es el ID del producto y el valor es el índice de la variante seleccionada.
+  // Esto permite al usuario cambiar entre diferentes variantes de un producto.
+  // Cuando el usuario selecciona una variante diferente del menú desplegable, se llama a esta función para actualizar el estado.
+  // La variante seleccionada se utiliza para mostrar la información correcta de precio y stock en la tabla.
+  
   const handleVariantChange = (productId: string, variantIndex: number) => {
     setSelectedVariants({
       ...selectedVariants,
@@ -63,19 +64,18 @@ export const TableProduct = () => {
 
   if (!products || isLoading || !totalProducts || isPending) return <Loader />;
 
+  // Este componente genera una tabla de productos con sus detalles.
+  // Permite a los usuarios seleccionar variantes, eliminar productos y navegar a las páginas de edición.
+  // Utiliza hooks personalizados para obtener productos y gestionar su eliminación.
+  // La tabla muestra imágenes de productos, nombres, variantes seleccionadas, precios, existencias,
+  // fechas de creación y botones para editar y eliminar productos.
+  // El hook `useProducts` obtiene los datos de los productos y gestiona la paginación.
+  // El hook `useDeleteProduct` gestiona la eliminación de un producto cuando el usuario hace clic en el botón de eliminar del menú.
+  // Las funciones `formatPrice` y `formatDate` se utilizan para dar formato a los valores de precio y fecha para una mejor legibilidad.
+  // El componente `CellTableProduct` se utiliza para generar el contenido de cada celda de la tabla,
+  // proporcionando un estilo uniforme para los nombres de productos, precios y fechas.
+
   return (
-    // This component renders a table of products with their details.
-    // It allows users to select variants, delete products, and navigate to edit pages.
-    // It uses custom hooks to fetch products and handle deletion.
-    // The table displays product images, names, selected variants, prices, stock,
-    // creation dates, and action buttons for editing and deleting products.
-    // The `useProducts` hook fetches the products data and handles pagination.
-    // The `useDeleteProduct` hook handles the deletion of a product when the user
-    // clicks the delete button in the menu.
-    // The `formatPrice` and `formatDate` functions are used to format the
-    // price and date values for better readability.
-    // The `CellTableProduct` component is used to render the content of each cell
-    // in the table, providing a consistent style for product names, prices, and dates
     <div className="flex flex-col flex-1 border border-gray-200 rounded-lg p-5 bg-white">
       <h1 className="font-bold text-xl">Productos</h1>
 
