@@ -20,10 +20,11 @@ interface Props {
   titleForm: string;
 }
 
+// Este componente se utiliza para crear o actualizar un producto.
+// Utiliza react-hook-form para la gestión y validación de formularios.
+// También utiliza zod para la validación del esquema.
+
 export const FormProduct = ({ titleForm }: Props) => {
-  // This component is used to create or update a product.
-  // It uses react-hook-form for form handling and validation.
-  // It also uses zod for schema validation.
   const {
     register,
     handleSubmit,
