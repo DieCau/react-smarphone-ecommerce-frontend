@@ -1,6 +1,7 @@
 import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 import type { ProductFormValues } from '../../../lib/validators';
 
+// Importamos los tipos necesarios de react-hook-form y el tipo ProductFormValues
 interface Props {
   className?: string;
 
