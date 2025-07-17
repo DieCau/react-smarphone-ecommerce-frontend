@@ -45,18 +45,19 @@ export const FormProduct = ({ titleForm }: Props) => {
 
   const navigate = useNavigate();
 
-  // This effect is used to set the form values when the product data is loaded.
-  // It checks if the product exists and if the data is not loading.
-  // If the product exists, it sets the form values using setValue from react-hook-form
-  // It maps the product features and variants to the expected format for the form.
-  // It also sets the initial content for the description editor.
-  // This ensures that the form is pre-populated with the existing product data when editing.
-  // If the product is being created, it will not set any values.
-  // This effect runs whenever the product data changes or when the loading state changes.
-  // It is important to ensure that the form is correctly populated with the product data
-  // when editing an existing product, and that the form is empty when creating a new product
-  // This is done to provide a better user experience and to avoid having to fill in the
-  // form fields manually when editing a product.
+  // Este useEffect se utiliza para establecer los valores del formulario al cargar los datos del producto.
+  // Comprueba si el producto existe y si los datos no se están cargando. Si el producto existe,
+  // establece los valores del formulario mediante setValue de react-hook-form.
+  // Asigna las características y variantes del producto al formato esperado del formulario.
+  // También establece el contenido inicial del editor de descripciones.
+  // Esto garantiza que el formulario se rellene previamente con los datos del producto al editarlo.
+  // Si se está creando el producto, no se establecerá ningún valor.
+  // Este efecto se ejecuta siempre que cambien los datos del producto o el estado de carga.
+  // Es importante asegurarse de que el formulario se rellene correctamente con los datos del producto
+  // al editar un producto existente y de que esté vacío al crear uno nuevo.
+  // Esto se hace para ofrecer una mejor experiencia de usuario y evitar tener que rellenar los campos
+  // del formulario manualmente al editar un producto.
+
   useEffect(() => {
     if (product && !isLoading) {
       setValue('name', product.name);
