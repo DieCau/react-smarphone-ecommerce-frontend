@@ -48,7 +48,7 @@ export const FormProduct = ({ titleForm }: Props) => {
   // en la URL. Si el slug no está presente, se utilizará una cadena vacía por defecto.
   // Esto permite que el componente maneje tanto la creación como la edición de productos
   // de manera flexible y reutilizable.
-  
+
   const { slug } = useParams<{ slug: string }>();
 
   const { product, isLoading } = useProduct(slug || '');
@@ -96,6 +96,16 @@ export const FormProduct = ({ titleForm }: Props) => {
     }
   }, [product, isLoading, setValue]);
 
+  // Esta función se encarga de manejar el envío del formulario.
+  // Utiliza handleSubmit de react-hook-form para validar los datos del formulario.
+  // Si el slug está presente, significa que se está actualizando un producto existente,
+  // por lo que se llama a la función updateProduct con los datos del formulario.
+  // Si el slug no está presente, significa que se está creando un nuevo producto,
+  // por lo que se llama a la función createProduct con los datos del formulario.
+  // Ambas funciones (createProduct y updateProduct) son mutaciones que se encargan de
+  // enviar los datos al servidor para crear o actualizar el producto.
+  // Los datos del formulario incluyen el nombre, la marca, el slug, las variantes,
+  // las imágenes, la descripción y las características del producto.
   const onSubmit = handleSubmit((data) => {
     const features = data.features.map((feature) => feature.value);
 
