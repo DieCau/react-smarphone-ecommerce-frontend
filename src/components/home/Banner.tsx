@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
 
+// Este componente representa un banner en la página de inicio.
+// Incluye una imagen de fondo, un título, un subtítulo y un botón de llamada a la acción.
+// El banner está diseñado para ser atractivo y destacar las ofertas de celulares.
+// Utiliza Tailwind CSS para el estilo y la disposición.
+// El componente se exporta como Banner para su uso en otras partes de la aplicación.
+
 export const Banner = () => {
   return (
     <div className="relative bg-gray-500 text-white">
