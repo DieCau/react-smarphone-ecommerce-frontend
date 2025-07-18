@@ -1,3 +1,6 @@
+// Este componente muestra un formulario de suscripción al boletín de noticias de la tienda.
+// Permite a los usuarios ingresar su correo electrónico para recibir promociones exclusivas.
+
 export const Newsletter = () => {
   return (
     <div className="relative bg-gray-500 text-white py-20">
