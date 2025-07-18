@@ -6,14 +6,15 @@ interface Props {
   products: PreparedProducts[];
 }
 
-// This component displays a grid of products with a title.
-// It maps through the products array and renders a CardProduct component for each product.
-// The grid is responsive, adjusting the number of columns based on the screen size.
-// The title is displayed above the grid, styled with a larger font size for emphasis.
-// The products are expected to have properties like id, name, price, colors, images,
-// slug, and variants, which are used to populate the CardProduct component.
-// The component is designed to be reusable, allowing different titles and product lists to be passed as props.
-// The grid layout is achieved using Tailwind CSS classes, providing a clean and modern look.
+// Este componente muestra una cuadrícula de productos con un título.
+// Se mapea a través de la matriz de productos y renderiza un componente CardProduct para cada producto.
+// La cuadrícula es adaptable y ajusta el número de columnas según el tamaño de la pantalla.
+// El título se muestra sobre la cuadrícula, con un tamaño de fuente más grande para resaltarlo.
+// Se espera que los productos tengan propiedades como id, nombre, precio, colores, imágenes, slug y variantes, 
+// que se utilizan para rellenar el componente CardProduct.
+// El componente está diseñado para ser reutilizable, lo que permite pasar diferentes títulos y listas de productos como propiedades.
+// El diseño de la cuadrícula se logra mediante clases CSS de Tailwind, lo que proporciona una apariencia limpia y moderna.
+
 export const ProductGrid = ({ title, products }: Props) => {
   return (
     <div className="my-32">
