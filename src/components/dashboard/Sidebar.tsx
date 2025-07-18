@@ -21,47 +21,45 @@ import { signOut } from '../../actions';
 // proporcionando un acceso fácil a la navegación a lo largo del panel de control.
 
 export const Sidebar = () => {
-	const handleLogout = async () => {
-		await signOut();
-	};
+  const handleLogout = async () => {
+    await signOut();
+  };
 
-	return (
-		<div className='w-[120px] bg-stone-800 text-white flex flex-col gap-10 items-center p-5 fixed h-screen lg:w-[250px]'>
-			<Logo isDashboard/>
+  return (
+    <div className="w-[120px] bg-stone-800 text-white flex flex-col gap-10 items-center p-5 fixed h-screen lg:w-[250px]">
+      <Logo isDashboard />
 
-			<nav className='w-full space-y-5 flex-1'>
-				{dashboardLinks.map(link => (
-					<NavLink
-						key={link.id}
-						to={link.href}
-						className={({ isActive }) =>
-							`flex items-center justify-center gap-3 pl-0 py-3 transition-all duration-300 rounded-md ${
-								isActive
-									? 'text-white bg-cyan-600'
-									: 'hover:text-white hover:bg-cyan-600'
-							} lg:pl-5 lg:justify-start`
-						}
-					>
-						{link.icon}
-						<p className='font-semibold hidden lg:block'>
-							{link.title}
-						</p>
-					</NavLink>
-				))}
-			</nav>
+      <nav className="w-full space-y-5 flex-1">
+        {dashboardLinks.map((link) => (
+          <NavLink
+            key={link.id}
+            to={link.href}
+            className={({ isActive }) =>
+              `flex items-center justify-center gap-3 pl-0 py-3 transition-all duration-300 rounded-md ${
+                isActive
+                  ? 'text-white bg-cyan-600'
+                  : 'hover:text-white hover:bg-cyan-600'
+              } lg:pl-5 lg:justify-start`
+            }
+          >
+            {link.icon}
+            <p className="font-semibold hidden lg:block">{link.title}</p>
+          </NavLink>
+        ))}
+      </nav>
 
-			{/* The logout button is styled with a red background and includes an icon. */}
-			{/* It triggers the signOut action when clicked, logging the user out of the dashboard. */}
-			{/* The button is designed to be prominent and easily accessible, ensuring users can log out quickly. */}
-			{/* The button is responsive, with different styles for mobile and larger screens. */}
-			{/* The button is user-friendly, with clear text and an icon indicating the logout action. */}
-			<button
-				className='bg-red-500 w-full py-[10px] rounded-md flex items-center justify-center gap-2 font-semibold text-sm hover:underline'
-				onClick={handleLogout}
-			>
-				<span className='hidden lg:block'>Cerrar sesión</span>
-				<IoLogOutOutline size={20} className='inline-block' />
-			</button>
-		</div>
-	);
+      {/* El botón de cierre de sesión tiene un fondo rojo e incluye un icono. */}
+      {/* Al hacer clic, activa la acción de cerrar sesión, cerrando la sesión del usuario en el panel. */}
+      {/* El botón está diseñado para destacarse y ser fácilmente accesible, lo que garantiza que los usuarios puedan cerrar sesión rápidamente. */}
+      {/* El botón es adaptable, con diferentes estilos para dispositivos móviles y pantallas más grandes. */}
+      {/* El botón es intuitivo, con texto claro y un icono que indica la acción de cerrar sesión. */}
+      <button
+        className="bg-red-500 w-full py-[10px] rounded-md flex items-center justify-center gap-2 font-semibold text-sm hover:underline"
+        onClick={handleLogout}
+      >
+        <span className="hidden lg:block">Cerrar sesión</span>
+        <IoLogOutOutline size={20} className="inline-block" />
+      </button>
+    </div>
+  );
 };
