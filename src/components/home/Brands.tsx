@@ -1,3 +1,4 @@
+// Una lista de marcas para mostrar en la página de inicio.
 const brands = [
   {
     image: './img/brands/apple-logo.webp',
@@ -26,8 +27,8 @@ const brands = [
   },
 ];
 
-// This component displays a list of brands available in the store.
-// It includes a title, a description, and a grid of brand logos.
+// Este componente muestra una lista de marcas disponibles en la tienda.
+// Incluye un título, una descripción y una cuadrícula de logotipos de marcas.
 export const Brands = () => {
   return (
     <div className="flex flex-col items-center gap-3 pt-16 pb-12">
