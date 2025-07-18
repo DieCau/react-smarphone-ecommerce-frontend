@@ -4,25 +4,28 @@ import { Logo } from '../shared/Logo';
 import { IoLogOutOutline } from 'react-icons/io5';
 import { signOut } from '../../actions';
 
+// Este componente representa la barra lateral del panel.
+// Incluye enlaces de navegación y un botón para cerrar sesión.
+// El componente utiliza la biblioteca react-router-dom para generar enlaces de navegación.
+// El componente también utiliza la acción signOut para cerrar sesión del usuario.
+// La barra lateral está diseñada para ser fija y se adapta a diferentes tamaños de pantalla.
+// Utiliza clases de Tailwind CSS para el estilo y la disposición.
+// El componente se exporta como Sidebar para su uso en otras partes de la aplicación.
+// El componente Sidebar es parte de un sistema de navegación más amplio
+// que permite a los usuarios navegar por diferentes secciones del panel de control.
+// La barra lateral incluye un logotipo, enlaces de navegación y un botón de cierre de sesión.
+// Los enlaces de navegación se generan a partir de un array constante de enlaces,
+// y cada enlace se estiliza según si está activo o no.
+// El botón de cierre de sesión está estilizado con un fondo rojo e incluye un icono.
+// La barra lateral está diseñada para estar fija en el lado izquierdo de la pantalla,
+// proporcionando un acceso fácil a la navegación a lo largo del panel de control.
+
 export const Sidebar = () => {
-	// This component renders the sidebar for the dashboard.
-	// It includes navigation links and a logout button.
 	const handleLogout = async () => {
 		await signOut();
 	};
 
 	return (
-		// The sidebar is styled with Tailwind CSS classes for a fixed position,
-		// background color, and responsive design.
-		// It contains a logo, navigation links, and a logout button.
-		// The navigation links are generated from a constant array of links,
-		// and each link is styled based on whether it is active or not.
-		// The logout button is styled with a red background and includes an icon.
-		// The sidebar is designed to be fixed on the left side of the screen,
-		// providing easy access to navigation throughout the dashboard.
-		// The sidebar is responsive, with different styles for mobile and larger screens.
-		// The sidebar is designed to be user-friendly and visually appealing,
-		// with clear navigation options and a prominent logout button.
 		<div className='w-[120px] bg-stone-800 text-white flex flex-col gap-10 items-center p-5 fixed h-screen lg:w-[250px]'>
 			<Logo isDashboard/>
 
