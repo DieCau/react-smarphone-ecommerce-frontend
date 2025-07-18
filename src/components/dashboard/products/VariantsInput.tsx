@@ -4,6 +4,9 @@ import type { ProductFormValues } from '../../../lib/validators';
 import { IoIosAddCircleOutline, IoIosCloseCircleOutline } from 'react-icons/io';
 import { useEffect, useState } from 'react';
 
+// Esta interfaz define las propiedades del componente VariantsInput.
+// Incluye control para gestionar el estado del formulario, errores para la validación 
+// y un registro para registrar los campos del formulario con React Hook Form.
 interface Props {
   control: Control<ProductFormValues>;
   errors: FieldErrors<ProductFormValues>;
@@ -12,17 +15,18 @@ interface Props {
 
 const headersVariants = ['Stock', 'Precio', 'Capacidad', 'Color', ''];
 
-// This component renders a form for managing product variants.
-// It allows users to add, remove, and edit product variants with fields for stock, price, storage, and color.
-// It uses React Hook Form's useFieldArray to manage dynamic fields for variants.
-// The component also handles color selection and displays validation errors for each variant.
-// It is designed to be used within a larger product management form.
-// The component uses TypeScript for type safety and defines the Props interface for its props.
-// It also uses React's useState and useEffect hooks to manage local state and side effects.
-// The useWatch hook from React Hook Form is used to observe changes in the color and colorName
-// fields of each variant, allowing for dynamic updates to the UI based on user input.
-// The component is styled using Tailwind CSS classes for a consistent and responsive design.
-// The component is exported as VariantsInput for use in other parts of the application.
+// Este componente genera un formulario para gestionar variantes de producto.
+// Permite a los usuarios añadir, eliminar y editar variantes de producto con campos de stock, precio, almacenamiento y color.
+// Utiliza el método useFieldArray de React Hook Form para gestionar los campos dinámicos de las variantes.
+// El componente también gestiona la selección de color y muestra errores de validación para cada variante.
+// Está diseñado para utilizarse dentro de un formulario de gestión de productos más amplio.
+// El componente utiliza TypeScript para la seguridad de tipos y define la interfaz Props para sus propiedades.
+// También utiliza los métodos useState y useEffect de React para gestionar el estado local y los efectos secundarios.
+// El método useWatch de React Hook Form se utiliza para observar los cambios en los campos color y colorName de cada variante, 
+// lo que permite actualizaciones dinámicas de la interfaz de usuario según la entrada del usuario.
+// El componente se diseña con clases CSS de Tailwind para un diseño coherente y adaptable.
+// El componente se exporta como VariantsInput para su uso en otras partes de la aplicación.
+
 export const VariantsInput = ({ control, errors, register }: Props) => {
   const { fields, remove, append } = useFieldArray({
     control,
