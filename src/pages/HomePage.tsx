@@ -1,3 +1,4 @@
+// HomePage.tsx
 import { Brands } from '../components/home/Brands';
 import { FeatureGrid } from '../components/home/FeatureGrid';
 import { ProductGrid } from '../components/home/ProductGrid';
