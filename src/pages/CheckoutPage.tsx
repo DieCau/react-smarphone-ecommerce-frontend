@@ -1,3 +1,4 @@
+// CheckoutPage.tsx
 import { Link, useNavigate } from 'react-router-dom';
 import { useCartStore } from '../store/cart.store';
 import { FormCheckout } from '../components/checkout/FormCheckout';
