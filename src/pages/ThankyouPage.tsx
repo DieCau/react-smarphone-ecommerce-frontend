@@ -1,3 +1,4 @@
+// ThankyouPage.tsx
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useOrder, useUser } from '../hooks';
 import { Loader } from '../components/shared/Loader';
