@@ -14,7 +14,7 @@ import { Loader } from '../components/shared/Loader';
 // Si el usuario ya está autenticado, se redirige a la página principal.
 // Si el usuario no está autenticado, se muestra el formulario de inicio de sesión. 
 export const LoginPage = () => {
-	const [email, setEmail] = useState('bdj04113@dcobe.com');
+	const [email, setEmail] = useState('email@email.com');
 	const [password, setPassword] = useState('Abc123');
 
 	const { mutate, isPending } = useLogin();
