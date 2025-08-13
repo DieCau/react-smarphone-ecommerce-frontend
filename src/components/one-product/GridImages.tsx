@@ -1,15 +1,14 @@
-import { useState } from 'react';
-
-interface Props {
-  images: string[];
-}
-
 // Este componente muestra una cuadrícula de imágenes de un producto.
 // Permite a los usuarios hacer clic en las miniaturas para ver una versión más grande de la imagen.
 // La imagen activa se resalta con un borde y la imagen principal se muestra en un contenedor más grande.
 // El componente está diseñado para ser adaptable a diferentes tamaños de pantalla.
 // Las imágenes se envían como un array de cadenas, donde cada cadena es la URL de una imagen.
 // El componente utiliza Tailwind CSS para el estilo, lo que proporciona una apariencia limpia y moderna.
+import { useState } from 'react';
+
+interface Props {
+  images: string[];
+}
 
 export const GridImages = ({ images }: Props) => {
   const [activeImage, setActiveImage] = useState(images[0]);
