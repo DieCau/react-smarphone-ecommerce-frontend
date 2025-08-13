@@ -1,24 +1,24 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { RootLayout } from '../layouts/RootLayout';
-import {
-  HomePage,
-  CellPhonesPage,
-  AboutPage,
-  CellPhonePage,
-  LoginPage,
-  RegisterPage,
-  OrdersUserPage,
-  CheckoutPage,
-  ThankyouPage,
-  OrderUserPage,
-  DashboardProductsPage,
-  DashboardNewProductPage,
-  DashboardProductSlugPage,
-  DashboardOrdersPage,
-  DashboardOrderPage,  
-} from '../pages';
 import { ClientLayout } from '../layouts/ClientLayout';
 import { DashboardLayout } from '../layouts/DashboardLayout';
+import { RootLayout } from '../layouts/RootLayout';
+import {
+  AboutPage,
+  CellPhonePage,
+  CellPhonesPage,
+  CheckoutPage,
+  DashboardNewProductPage,
+  DashboardOrderPage,
+  DashboardOrdersPage,
+  DashboardProductSlugPage,
+  DashboardProductsPage,
+  HomePage,
+  LoginPage,
+  OrdersUserPage,
+  OrderUserPage,
+  RegisterPage,
+  ThankyouPage,
+} from '../pages';
 
 // Router
 // Este archivo define la estructura de enrutamiento de la aplicación usando React Router.
@@ -114,9 +114,4 @@ export const router = createBrowserRouter([
     ],
   },
 ],
-{
-  future: {
-    v7_startTransition: true,
-  },
-}
 );
