@@ -26,7 +26,7 @@ import { DashboardLayout } from '../layouts/DashboardLayout';
 // Iniciar sesión y Registrarse, así como rutas protegidas para cuentas de usuario y funcionalidades del panel de control.
 // La función `createBrowserRouter` se utiliza para crear una instancia de enrutador con rutas anidadas.
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter([  
   {
     path: '/',
     element: <RootLayout />,
@@ -113,4 +113,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+],
+{
+  future: {
+    v7_startTransition: true,
+  },
+}
+);
